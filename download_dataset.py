@@ -1,3 +1,2 @@
-# download_dataset.py - TREMO support added
-# Kaggle API integration
-# mansuralp/tremo
+# download_dataset.py - Tweet & HF integration
+# Guven et al. 2019 dataset
