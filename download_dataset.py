@@ -1,2 +1,2 @@
-# download_dataset.py - CLI arguments added
-import argparse
+# download_dataset.py - Text normalization
+import re
