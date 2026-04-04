@@ -1,2 +1,2 @@
-# download_dataset.py - Unicode tr_lower support
-_TR_LOWER = str.maketrans('IİÇĞÖŞÜ', 'ıiçğöşü')
+# download_dataset.py - Regex cleaner added
+_URL_RE = re.compile(r'https?://\S+|www\.\S+')
