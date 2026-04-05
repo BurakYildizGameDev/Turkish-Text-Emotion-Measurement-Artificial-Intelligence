@@ -1,0 +1,4 @@
+project:
+  name: turkish-emotion
+emotions:
+  labels: ['mutluluk', 'uzuntu', 'ofke', 'korku', 'surpriz', 'igrenme']
