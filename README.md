@@ -1,3 +1,4 @@
 # Türkçe Metin Duygu Analizi
 
-Bu proje Türkçe metinlerde duygu sınıflandırması yapmayı amaçlamaktadır.
+## Kurulum ve Veri İndirme
+python download_dataset.py
