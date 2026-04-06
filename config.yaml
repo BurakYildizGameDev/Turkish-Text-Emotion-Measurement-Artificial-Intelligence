@@ -1,4 +1,5 @@
 project:
   name: turkish-emotion
 emotions:
-  labels: ['mutluluk', 'uzuntu', 'ofke', 'korku', 'surpriz', 'igrenme']
+  num_labels: 8
+  labels: ['mutluluk', 'üzüntü', 'öfke', 'korku', 'şaşkınlık', 'tiksinti', 'sevgi', 'nötr']
