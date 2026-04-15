@@ -1,4 +1,4 @@
 # Türkçe Metin Duygu Analizi
 
-## Kurulum ve Veri İndirme
-python download_dataset.py
+## Veri Sızıntısı ve Tekilleştirme
+TF-IDF ve Jaccard analizi ile sızıntılar engellenmiştir.
