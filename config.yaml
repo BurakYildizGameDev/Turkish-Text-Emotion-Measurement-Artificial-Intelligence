@@ -1,5 +1,7 @@
 project:
   name: turkish-emotion
-emotions:
-  num_labels: 8
-  labels: ['mutluluk', 'üzüntü', 'öfke', 'korku', 'şaşkınlık', 'tiksinti', 'sevgi', 'nötr']
+split:
+  train: 0.8
+  val: 0.1
+  test: 0.1
+  seed: 42
