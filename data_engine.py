@@ -1,3 +1,4 @@
+# Commit 41: feat(model): integrate BERTurk (dbmdz/bert-base-turkish-cased) tokenizer
 """
 Master Data Engine — 10 Sınıflı Türkçe Duygu Analizi
 =====================================================
