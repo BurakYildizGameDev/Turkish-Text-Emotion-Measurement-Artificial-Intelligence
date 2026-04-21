@@ -1,1 +1,1 @@
-# baseline_finetuned.py - TF-IDF + LogisticRegression
+# baseline_finetuned.py - LinearSVC baseline
