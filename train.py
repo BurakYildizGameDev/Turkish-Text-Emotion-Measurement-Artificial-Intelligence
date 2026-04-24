@@ -1,1 +1,1 @@
-# train.py - BERTurk architecture config
+# train.py - AdamW and warmup scheduler
