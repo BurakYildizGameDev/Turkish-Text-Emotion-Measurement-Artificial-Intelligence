@@ -1,1 +1,1 @@
-# train.py - best checkpoint saving
+# train.py - EarlyStoppingCallback
