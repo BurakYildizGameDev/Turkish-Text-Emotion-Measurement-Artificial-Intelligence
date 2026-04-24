@@ -1,1 +1,1 @@
-# train.py - epoch evaluation hook
+# train.py - best checkpoint saving
