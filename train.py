@@ -1,1 +1,1 @@
-# train.py - AdamW and warmup scheduler
+# train.py - epoch evaluation hook
