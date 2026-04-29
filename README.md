@@ -1,4 +1,4 @@
 # Türkçe Metin Duygu Analizi
 
-## Veri Sızıntısı ve Tekilleştirme
-TF-IDF ve Jaccard analizi ile sızıntılar engellenmiştir.
+## İlk Baseline Sonuçları
+TF-IDF: ~0.76 macro-F1
