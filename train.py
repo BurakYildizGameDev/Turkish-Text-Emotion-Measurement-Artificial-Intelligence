@@ -1,1 +1,1 @@
-# train.py - fp16 mixed precision
+# train.py - gradient accumulation
