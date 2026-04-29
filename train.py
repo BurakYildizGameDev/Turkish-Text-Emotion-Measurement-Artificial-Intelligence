@@ -1,1 +1,1 @@
-# train.py - gradient accumulation
+# train.py - tqdm progress bars
