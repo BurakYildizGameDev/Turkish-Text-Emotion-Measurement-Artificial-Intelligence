@@ -1,3 +1,4 @@
+# Commit 70: feat(training): add seed argument for deterministic reproducibility
 """
 BERTurk Fine-Tuning Pipeline
 dbmdz/bert-base-turkish-cased modelini data/splits/tremo_splits ile fine-tune eder.
