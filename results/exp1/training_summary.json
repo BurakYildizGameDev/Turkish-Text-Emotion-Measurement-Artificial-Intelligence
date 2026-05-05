@@ -1,0 +1,239 @@
+{
+  "experiment": "Exp1 Baseline BERTurk",
+  "timestamp": "2026-04-28 13:53:35",
+  "test_metrics": {
+    "accuracy": 0.8082,
+    "f1_macro": 0.3617,
+    "f1_weighted": 0.846,
+    "roc_auc_macro": 0.8989,
+    "roc_auc_micro": 0.9605,
+    "mean_avg_prec": 0.451,
+    "mean_ece": 0.3487
+  },
+  "per_class": {
+    "mutluluk": {
+      "precision": 0.962,
+      "recall": 0.814,
+      "f1": 0.8818,
+      "support": 41960,
+      "roc_auc": 0.9415,
+      "avg_prec": 0.956,
+      "ece": 0.245
+    },
+    "üzüntü": {
+      "precision": 0.6172,
+      "recall": 0.7277,
+      "f1": 0.6679,
+      "support": 9947,
+      "roc_auc": 0.8861,
+      "avg_prec": 0.7285,
+      "ece": 0.1215
+    },
+    "öfke": {
+      "precision": 0.1313,
+      "recall": 0.3753,
+      "f1": 0.1946,
+      "support": 802,
+      "roc_auc": 0.8448,
+      "avg_prec": 0.1428,
+      "ece": 0.2369
+    },
+    "korku": {
+      "precision": 0.0804,
+      "recall": 0.7263,
+      "f1": 0.1448,
+      "support": 95,
+      "roc_auc": 0.9591,
+      "avg_prec": 0.4576,
+      "ece": 0.4555
+    },
+    "şaşkınlık": {
+      "precision": 0.1838,
+      "recall": 0.7045,
+      "f1": 0.2915,
+      "support": 660,
+      "roc_auc": 0.9041,
+      "avg_prec": 0.328,
+      "ece": 0.3235
+    },
+    "tiksinti": {
+      "precision": 0.046,
+      "recall": 0.7241,
+      "f1": 0.0865,
+      "support": 87,
+      "roc_auc": 0.9552,
+      "avg_prec": 0.2047,
+      "ece": 0.4699
+    },
+    "sevgi": {
+      "precision": 0.173,
+      "recall": 0.8194,
+      "f1": 0.2856,
+      "support": 753,
+      "roc_auc": 0.9478,
+      "avg_prec": 0.4561,
+      "ece": 0.3789
+    },
+    "nötr": {
+      "precision": 0.9829,
+      "recall": 0.8433,
+      "f1": 0.9078,
+      "support": 28183,
+      "roc_auc": 0.9649,
+      "avg_prec": 0.9659,
+      "ece": 0.2962
+    },
+    "utanç": {
+      "precision": 0.0531,
+      "recall": 0.5405,
+      "f1": 0.0966,
+      "support": 37,
+      "roc_auc": 0.7688,
+      "avg_prec": 0.1603,
+      "ece": 0.4761
+    },
+    "gurur": {
+      "precision": 0.032,
+      "recall": 0.5,
+      "f1": 0.0602,
+      "support": 8,
+      "roc_auc": 0.8162,
+      "avg_prec": 0.1104,
+      "ece": 0.483
+    }
+  },
+  "roc_auc": {
+    "mutluluk": 0.9415,
+    "üzüntü": 0.8861,
+    "öfke": 0.8448,
+    "korku": 0.9591,
+    "şaşkınlık": 0.9041,
+    "tiksinti": 0.9552,
+    "sevgi": 0.9478,
+    "nötr": 0.9649,
+    "utanç": 0.7688,
+    "gurur": 0.8162,
+    "micro_avg": 0.9605,
+    "macro_avg": 0.8989
+  },
+  "average_precision": {
+    "mutluluk": 0.956,
+    "üzüntü": 0.7285,
+    "öfke": 0.1428,
+    "korku": 0.4576,
+    "şaşkınlık": 0.328,
+    "tiksinti": 0.2047,
+    "sevgi": 0.4561,
+    "nötr": 0.9659,
+    "utanç": 0.1603,
+    "gurur": 0.1104,
+    "micro_avg": 0.8079,
+    "mean_ap": 0.451
+  },
+  "calibration_ece": {
+    "mutluluk": 0.245,
+    "üzüntü": 0.1215,
+    "öfke": 0.2369,
+    "korku": 0.4555,
+    "şaşkınlık": 0.3235,
+    "tiksinti": 0.4699,
+    "sevgi": 0.3789,
+    "nötr": 0.2962,
+    "utanç": 0.4761,
+    "gurur": 0.483,
+    "mean_ece": 0.3487
+  },
+  "confidence_analysis": {
+    "mean_confidence_correct": 0.72,
+    "mean_confidence_wrong": 0.5536,
+    "median_confidence": 0.7342,
+    "p90_confidence": 0.8511,
+    "overconfidence_rate_0.8": 0.1316
+  },
+  "training_history": {
+    "epoch": [
+      1.0,
+      2.0
+    ],
+    "train_loss": [
+      0.108,
+      0.0441
+    ],
+    "val_loss": [
+      1.1588914394378662,
+      0.8134316205978394
+    ],
+    "val_acc": [
+      0.7297169582707314,
+      0.8073838026462463
+    ],
+    "val_f1_macro": [
+      0.2970396405579133,
+      0.3645267620446282
+    ],
+    "val_f1_weighted": [
+      0.7958270401338579,
+      0.8455094449478842
+    ],
+    "val_f1_mutluluk": [
+      0.8809581758790751,
+      0.8826988548437016
+    ],
+    "val_f1_üzüntü": [
+      0.6041793467234733,
+      0.6672832369942197
+    ],
+    "val_f1_öfke": [
+      0.07268801727240014,
+      0.20554123711340205
+    ],
+    "val_f1_korku": [
+      0.08255813953488372,
+      0.138801261829653
+    ],
+    "val_f1_şaşkınlık": [
+      0.2018836029944458,
+      0.29030265596046945
+    ],
+    "val_f1_tiksinti": [
+      0.02478407810739767,
+      0.07942708333333333
+    ],
+    "val_f1_sevgi": [
+      0.22419227738376674,
+      0.287243947858473
+    ],
+    "val_f1_nötr": [
+      0.792462461185078,
+      0.9051083709887416
+    ],
+    "val_f1_utanç": [
+      0.04835164835164835,
+      0.10552763819095477
+    ],
+    "val_f1_gurur": [
+      0.038338658146964855,
+      0.08333333333333333
+    ]
+  },
+  "step_history_length": 7,
+  "epoch_times_sec": [
+    119.18,
+    117.44
+  ],
+  "total_steps": 648,
+  "final_train_loss": 0.3084,
+  "total_runtime_sec": 425.52,
+  "total_runtime_min": 7.09,
+  "samples_per_second": 194.58,
+  "extra": {
+    "token_length_stats": {
+      "mean": 31.52,
+      "median": 19.0,
+      "p95": 87.05,
+      "p99": 206.05,
+      "max": 722,
+      "truncated_pct": 2.54
+    }
+  }
+}
