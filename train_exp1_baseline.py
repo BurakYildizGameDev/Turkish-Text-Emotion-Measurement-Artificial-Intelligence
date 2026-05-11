@@ -1,3 +1,4 @@
+# Commit 93: feat(training): add cosine learning rate schedule to train_exp1
 """
 Experiment 1 — Baseline BERTurk
 ================================
