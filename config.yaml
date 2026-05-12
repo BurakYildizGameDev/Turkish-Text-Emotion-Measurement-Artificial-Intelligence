@@ -1,7 +1,3 @@
-model:
-  base_model: dbmdz/bert-base-turkish-cased
-  max_length: 128
-training:
-  lr: 2e-5
-  batch_size: 16
-  epochs: 5
+experiments:
+  exp0: unweighted
+  exp1: weighted_sampler
