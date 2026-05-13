@@ -1,4 +1,4 @@
 # Türkçe Metin Duygu Analizi
 
-## İlk Baseline Sonuçları
-TF-IDF: ~0.76 macro-F1
+## EXP0 ve EXP1 Analizi
+WeightedRandomSampler azınlık sınıfların öğrenmesini sağlamıştır.
