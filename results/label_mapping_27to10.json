@@ -1,0 +1,61 @@
+{
+  "description": "GoEmotions 28 sınıf → TR-EmotionNet 10 sınıf dönüşüm kuralları",
+  "date": "2026-06-14",
+  "source": "data_engine.py — _GO_TO_10 sözlüğü (satır 83-112)",
+  "original_goemotions_count": 28,
+  "target_class_count": 10,
+  "mapping": {
+    "admiration":    "mutluluk",
+    "amusement":     "mutluluk",
+    "anger":         "öfke",
+    "annoyance":     "öfke",
+    "approval":      "mutluluk",
+    "caring":        "sevgi",
+    "confusion":     "şaşkınlık",
+    "curiosity":     "şaşkınlık",
+    "desire":        "sevgi",
+    "disappointment":"üzüntü",
+    "disapproval":   "öfke",
+    "disgust":       "tiksinti",
+    "embarrassment": "utanç",
+    "excitement":    "mutluluk",
+    "fear":          "korku",
+    "gratitude":     "sevgi",
+    "grief":         "üzüntü",
+    "joy":           "mutluluk",
+    "love":          "sevgi",
+    "nervousness":   "korku",
+    "optimism":      "mutluluk",
+    "pride":         "gurur",
+    "realization":   "şaşkınlık",
+    "relief":        "mutluluk",
+    "remorse":       "üzüntü",
+    "sadness":       "üzüntü",
+    "surprise":      "şaşkınlık",
+    "neutral":       "nötr"
+  },
+  "removed_labels": [],
+  "merged_labels": {
+    "mutluluk":  ["admiration", "amusement", "approval", "excitement", "joy", "optimism", "relief"],
+    "sevgi":     ["caring", "desire", "gratitude", "love"],
+    "öfke":      ["anger", "annoyance", "disapproval"],
+    "üzüntü":    ["disappointment", "grief", "remorse", "sadness"],
+    "korku":     ["fear", "nervousness"],
+    "tiksinti":  ["disgust"],
+    "şaşkınlık": ["confusion", "curiosity", "realization", "surprise"],
+    "utanç":     ["embarrassment"],
+    "gurur":     ["pride"],
+    "nötr":      ["neutral"]
+  },
+  "controversial_mappings": {
+    "confusion":  "şaşkınlık — tartışmalı: kafa karışıklığı ve şaşkınlık kavramsal olarak farklıdır; confusion nötr veya ayrı sınıf olarak değerlendirilebilir",
+    "curiosity":  "şaşkınlık — tartışmalı: merak duygusu şaşkınlıktan ayrı bir bilişsel durumdur; ayrı sınıf veya sevgi/pozitif gruba dahil edilebilir",
+    "realization": "şaşkınlık — tartışmalı: farkındalık/anlama duygusu şaşkınlıktan farklıdır; nötr veya ayrı sınıf olarak değerlendirilebilir"
+  },
+  "notes": {
+    "multi_label_handling": "Çok etiketli örneklerde yalnızca ilk etiket alınmaktadır. Bu, bilgi kaybına ve etiket gürültüsüne yol açabilir.",
+    "şaşkınlık_inflation": "confusion + curiosity + realization + surprise → şaşkınlık eşlemesi sınıf içi heterojenliği artırmaktadır. şaşkınlık sınıfı diğer sınıflara kıyasla daha geniş anlam alanı kapsamaktadır.",
+    "removed_count": 0,
+    "all_28_mapped": true
+  }
+}
