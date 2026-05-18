@@ -1,0 +1,179 @@
+{
+  "experiment": "exp2_crosslingual_enhanced",
+  "model": "dbmdz/bert-base-turkish-cased",
+  "cross_lingual_source": "goemotions_tr",
+  "oversample_targets": {
+    "gurur": 3500,
+    "utanç": 4000,
+    "tiksinti": 4000,
+    "korku": 4000,
+    "şaşkınlık": 6000,
+    "öfke": 6000
+  },
+  "cl_weight_multiplier": 2.5,
+  "test_accuracy": 0.8743,
+  "test_f1_macro": 0.4629,
+  "test_f1_weighted": 0.8936,
+  "per_class": {
+    "mutluluk": {
+      "precision": 0.9692,
+      "recall": 0.8645,
+      "f1": 0.9138,
+      "support": 41960
+    },
+    "üzüntü": {
+      "precision": 0.7259,
+      "recall": 0.8225,
+      "f1": 0.7712,
+      "support": 9947
+    },
+    "öfke": {
+      "precision": 0.2225,
+      "recall": 0.6347,
+      "f1": 0.3294,
+      "support": 802
+    },
+    "korku": {
+      "precision": 0.2226,
+      "recall": 0.6842,
+      "f1": 0.3359,
+      "support": 95
+    },
+    "şaşkınlık": {
+      "precision": 0.2531,
+      "recall": 0.7439,
+      "f1": 0.3777,
+      "support": 660
+    },
+    "tiksinti": {
+      "precision": 0.141,
+      "recall": 0.4943,
+      "f1": 0.2194,
+      "support": 87
+    },
+    "sevgi": {
+      "precision": 0.253,
+      "recall": 0.8818,
+      "f1": 0.3931,
+      "support": 753
+    },
+    "nötr": {
+      "precision": 0.9899,
+      "recall": 0.9193,
+      "f1": 0.9533,
+      "support": 28183
+    },
+    "utanç": {
+      "precision": 0.1065,
+      "recall": 0.4865,
+      "f1": 0.1748,
+      "support": 37
+    },
+    "gurur": {
+      "precision": 0.0952,
+      "recall": 0.5,
+      "f1": 0.16,
+      "support": 8
+    }
+  },
+  "training_history": {
+    "epoch": [
+      1.0,
+      2.0
+    ],
+    "train_loss": [
+      0.2218,
+      0.1274
+    ],
+    "val_loss": [
+      0.4586832523345947,
+      0.476022332906723
+    ],
+    "val_acc": [
+      0.8750545243057238,
+      0.8738671060921824
+    ],
+    "val_f1_macro": [
+      0.46342801839756226,
+      0.4687952257919427
+    ],
+    "val_f1_weighted": [
+      0.8928640507205696,
+      0.89304051443205
+    ],
+    "val_f1_mutluluk": [
+      0.9169473892796988,
+      0.9129141243507639
+    ],
+    "val_f1_üzüntü": [
+      0.7701646190453066,
+      0.7715024688455208
+    ],
+    "val_f1_öfke": [
+      0.34794156706507307,
+      0.35233494363929146
+    ],
+    "val_f1_korku": [
+      0.29017857142857145,
+      0.32360742705570295
+    ],
+    "val_f1_şaşkınlık": [
+      0.439117929050815,
+      0.3779527559055118
+    ],
+    "val_f1_tiksinti": [
+      0.21777777777777776,
+      0.257372654155496
+    ],
+    "val_f1_sevgi": [
+      0.3819325328759291,
+      0.39952788433166125
+    ],
+    "val_f1_nötr": [
+      0.9453648219950652,
+      0.951996906590068
+    ],
+    "val_f1_utanç": [
+      0.17670682730923695,
+      0.19148936170212766
+    ],
+    "val_f1_gurur": [
+      0.14814814814814814,
+      0.14925373134328357
+    ]
+  },
+  "comparison_vs_exp1": {
+    "f1_macro_ref": 0.3617,
+    "f1_macro_exp2": 0.4629,
+    "f1_macro_delta": 0.1012,
+    "per_class_delta": {
+      "mutluluk": 0.032,
+      "üzüntü": 0.1033,
+      "öfke": 0.1348,
+      "korku": 0.1911,
+      "şaşkınlık": 0.0862,
+      "tiksinti": 0.1329,
+      "sevgi": 0.1075,
+      "nötr": 0.0455,
+      "utanç": 0.0782,
+      "gurur": 0.0998
+    },
+    "egitim_butcesi": {
+      "exp1": {
+        "total_steps": 648,
+        "runtime_min": 7.09,
+        "epochs_logged": 2.0,
+        "veri": "~41k ornek (--max-per-class 10000), 2 epoch"
+      },
+      "exp2": {
+        "total_steps": 954,
+        "runtime_min": 8.27,
+        "epochs_logged": 2.0,
+        "veri": "~61k ornek (max_per_class 10000 + oversample), 2 epoch"
+      }
+    },
+    "karsilastirma_gecerli_mi": true,
+    "not": "Ayni max_per_class (10000) ve 2 epoch. Fark oversampling + CL agirliklandirmasindan gelir. Not: 'cross-lingual' adina ragmen yontem ceviri orneklerinin kopyalanarak cogaltilmasidir. Tek seed ile olculmustur; gurur (n=8) ve utanc (n=37) F1 degerleri cok gurultuludur.",
+    "duzeltme_tarihi": "2026-09-28"
+  }
+}
