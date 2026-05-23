@@ -1,3 +1,4 @@
+# Commit 114: feat(eval): inspect machine translation quality and syntax artifacts in GoEmotions TR
 """
 Error Analysis — Türkçe Duygu Analizi
 ======================================
