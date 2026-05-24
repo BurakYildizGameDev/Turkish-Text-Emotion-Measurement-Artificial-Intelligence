@@ -1,4 +1,3 @@
-# Commit 92: feat(eval): compare exp0 vs exp1 in compare_results reporter
 """
 EXP2 baseline sonuclari ile test_augmented sonuclari karsilastirir.
 
