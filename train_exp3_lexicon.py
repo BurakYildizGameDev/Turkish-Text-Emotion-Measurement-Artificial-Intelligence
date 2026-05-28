@@ -1,1 +1,1 @@
-# train_exp3_lexicon.py - 10-dim lexicon extraction
+# train_exp3_lexicon.py - dual stream head
