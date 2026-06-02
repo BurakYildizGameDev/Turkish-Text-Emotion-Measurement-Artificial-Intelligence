@@ -1,0 +1,377 @@
+{
+  "experiment": "Exp4 Master Hybrid",
+  "timestamp": "2026-04-28 13:44:17",
+  "test_metrics": {
+    "accuracy": 0.8761,
+    "f1_macro": 0.4597,
+    "f1_weighted": 0.8956,
+    "roc_auc_macro": 0.9653,
+    "roc_auc_micro": 0.9881,
+    "mean_avg_prec": 0.5261,
+    "mean_ece": 0.3463
+  },
+  "per_class": {
+    "mutluluk": {
+      "precision": 0.9697,
+      "recall": 0.867,
+      "f1": 0.9155,
+      "support": 41960,
+      "roc_auc": 0.9749,
+      "avg_prec": 0.9768,
+      "ece": 0.2164
+    },
+    "üzüntü": {
+      "precision": 0.7379,
+      "recall": 0.82,
+      "f1": 0.7768,
+      "support": 9947,
+      "roc_auc": 0.953,
+      "avg_prec": 0.8528,
+      "ece": 0.1678
+    },
+    "öfke": {
+      "precision": 0.2131,
+      "recall": 0.6434,
+      "f1": 0.3202,
+      "support": 802,
+      "roc_auc": 0.9667,
+      "avg_prec": 0.3116,
+      "ece": 0.3593
+    },
+    "korku": {
+      "precision": 0.2032,
+      "recall": 0.6737,
+      "f1": 0.3122,
+      "support": 95,
+      "roc_auc": 0.9695,
+      "avg_prec": 0.4705,
+      "ece": 0.4236
+    },
+    "şaşkınlık": {
+      "precision": 0.263,
+      "recall": 0.7364,
+      "f1": 0.3876,
+      "support": 660,
+      "roc_auc": 0.9789,
+      "avg_prec": 0.4179,
+      "ece": 0.361
+    },
+    "tiksinti": {
+      "precision": 0.1327,
+      "recall": 0.4713,
+      "f1": 0.2071,
+      "support": 87,
+      "roc_auc": 0.9546,
+      "avg_prec": 0.2064,
+      "ece": 0.4377
+    },
+    "sevgi": {
+      "precision": 0.2535,
+      "recall": 0.8884,
+      "f1": 0.3945,
+      "support": 753,
+      "roc_auc": 0.9879,
+      "avg_prec": 0.5658,
+      "ece": 0.4022
+    },
+    "nötr": {
+      "precision": 0.9908,
+      "recall": 0.9215,
+      "f1": 0.9549,
+      "support": 28183,
+      "roc_auc": 0.9939,
+      "avg_prec": 0.991,
+      "ece": 0.1933
+    },
+    "utanç": {
+      "precision": 0.1458,
+      "recall": 0.5676,
+      "f1": 0.232,
+      "support": 37,
+      "roc_auc": 0.9159,
+      "avg_prec": 0.2213,
+      "ece": 0.4347
+    },
+    "gurur": {
+      "precision": 0.0533,
+      "recall": 0.5,
+      "f1": 0.0964,
+      "support": 8,
+      "roc_auc": 0.958,
+      "avg_prec": 0.2473,
+      "ece": 0.4666
+    }
+  },
+  "roc_auc": {
+    "mutluluk": 0.9749,
+    "üzüntü": 0.953,
+    "öfke": 0.9667,
+    "korku": 0.9695,
+    "şaşkınlık": 0.9789,
+    "tiksinti": 0.9546,
+    "sevgi": 0.9879,
+    "nötr": 0.9939,
+    "utanç": 0.9159,
+    "gurur": 0.958,
+    "micro_avg": 0.9881,
+    "macro_avg": 0.9653
+  },
+  "average_precision": {
+    "mutluluk": 0.9768,
+    "üzüntü": 0.8528,
+    "öfke": 0.3116,
+    "korku": 0.4705,
+    "şaşkınlık": 0.4179,
+    "tiksinti": 0.2064,
+    "sevgi": 0.5658,
+    "nötr": 0.991,
+    "utanç": 0.2213,
+    "gurur": 0.2473,
+    "micro_avg": 0.933,
+    "mean_ap": 0.5261
+  },
+  "calibration_ece": {
+    "mutluluk": 0.2164,
+    "üzüntü": 0.1678,
+    "öfke": 0.3593,
+    "korku": 0.4236,
+    "şaşkınlık": 0.361,
+    "tiksinti": 0.4377,
+    "sevgi": 0.4022,
+    "nötr": 0.1933,
+    "utanç": 0.4347,
+    "gurur": 0.4666,
+    "mean_ece": 0.3463
+  },
+  "confidence_analysis": {
+    "mean_confidence_correct": 0.9468,
+    "mean_confidence_wrong": 0.7467,
+    "median_confidence": 0.9777,
+    "p90_confidence": 0.9978,
+    "overconfidence_rate_0.8": 0.4642
+  },
+  "training_history": {
+    "epoch": [
+      1.0,
+      2.0
+    ],
+    "train_loss": [
+      0.3825,
+      0.2355
+    ],
+    "val_loss": [
+      0.47075074911117554,
+      0.48120516538619995
+    ],
+    "val_acc": [
+      0.8762540590316483,
+      0.8749818252314254
+    ],
+    "val_f1_macro": [
+      0.45481404882825105,
+      0.4672414869424341
+    ],
+    "val_f1_weighted": [
+      0.895566142227238,
+      0.8942745870906673
+    ],
+    "val_f1_mutluluk": [
+      0.9178044716357034,
+      0.9137616065916622
+    ],
+    "val_f1_üzüntü": [
+      0.7736498279559169,
+      0.772740206772266
+    ],
+    "val_f1_öfke": [
+      0.3306477602320335,
+      0.3404120443740095
+    ],
+    "val_f1_korku": [
+      0.2672413793103448,
+      0.28846153846153844
+    ],
+    "val_f1_şaşkınlık": [
+      0.42792384406165007,
+      0.39334107626790554
+    ],
+    "val_f1_tiksinti": [
+      0.2046908315565032,
+      0.23902439024390243
+    ],
+    "val_f1_sevgi": [
+      0.36475629351901445,
+      0.3985911358966833
+    ],
+    "val_f1_nötr": [
+      0.9520951469180352,
+      0.9540548987884024
+    ],
+    "val_f1_utanç": [
+      0.18811881188118812,
+      0.21818181818181817
+    ],
+    "val_f1_gurur": [
+      0.12121212121212122,
+      0.15384615384615385
+    ]
+  },
+  "step_history_length": 10,
+  "epoch_times_sec": [
+    147.43,
+    146.28
+  ],
+  "total_steps": 954,
+  "final_train_loss": 0.7458,
+  "total_runtime_sec": 483.56,
+  "total_runtime_min": 8.06,
+  "samples_per_second": 252.35,
+  "extra": {
+    "lexicon_dim": 10,
+    "cl_weight_multiplier": 2.5,
+    "oversample_targets": {
+      "gurur": 3500,
+      "utanç": 4000,
+      "tiksinti": 4000,
+      "korku": 4000,
+      "şaşkınlık": 6000,
+      "öfke": 6000
+    },
+    "lexicon_analysis": {
+      "lexicon_only_f1_macro": 0.1343,
+      "lexicon_only_accuracy": 0.2666,
+      "hybrid_f1_macro": 0.4597,
+      "bert_contribution": 0.3254,
+      "per_class_lexicon_profile": {
+        "mutluluk": {
+          "anger": 0.0518,
+          "anticipation": 0.1683,
+          "disgust": 0.011,
+          "fear": 0.042,
+          "joy": 0.2911,
+          "negative": 0.1554,
+          "positive": 0.4239,
+          "sadness": 0.086,
+          "surprise": 0.1064,
+          "trust": 0.128
+        },
+        "üzüntü": {
+          "anger": 0.0591,
+          "anticipation": 0.2483,
+          "disgust": 0.0848,
+          "fear": 0.0924,
+          "joy": 0.1151,
+          "negative": 0.2832,
+          "positive": 0.3027,
+          "sadness": 0.1488,
+          "surprise": 0.1157,
+          "trust": 0.1412
+        },
+        "öfke": {
+          "anger": 0.1139,
+          "anticipation": 0.2087,
+          "disgust": 0.0634,
+          "fear": 0.0516,
+          "joy": 0.0599,
+          "negative": 0.2137,
+          "positive": 0.2092,
+          "sadness": 0.0943,
+          "surprise": 0.0782,
+          "trust": 0.124
+        },
+        "korku": {
+          "anger": 0.0416,
+          "anticipation": 0.1716,
+          "disgust": 0.0391,
+          "fear": 0.4787,
+          "joy": 0.0257,
+          "negative": 0.1501,
+          "positive": 0.1717,
+          "sadness": 0.0573,
+          "surprise": 0.0889,
+          "trust": 0.0934
+        },
+        "şaşkınlık": {
+          "anger": 0.0361,
+          "anticipation": 0.2404,
+          "disgust": 0.0227,
+          "fear": 0.0413,
+          "joy": 0.0601,
+          "negative": 0.15,
+          "positive": 0.1989,
+          "sadness": 0.0984,
+          "surprise": 0.1729,
+          "trust": 0.1255
+        },
+        "tiksinti": {
+          "anger": 0.064,
+          "anticipation": 0.1245,
+          "disgust": 0.326,
+          "fear": 0.0863,
+          "joy": 0.0277,
+          "negative": 0.2521,
+          "positive": 0.1759,
+          "sadness": 0.103,
+          "surprise": 0.1015,
+          "trust": 0.1506
+        },
+        "sevgi": {
+          "anger": 0.0204,
+          "anticipation": 0.1738,
+          "disgust": 0.0144,
+          "fear": 0.0324,
+          "joy": 0.4361,
+          "negative": 0.1218,
+          "positive": 0.2145,
+          "sadness": 0.0815,
+          "surprise": 0.059,
+          "trust": 0.1355
+        },
+        "nötr": {
+          "anger": 0.0271,
+          "anticipation": 0.1641,
+          "disgust": 0.0146,
+          "fear": 0.0321,
+          "joy": 0.0404,
+          "negative": 0.0696,
+          "positive": 0.1887,
+          "sadness": 0.0974,
+          "surprise": 0.0655,
+          "trust": 0.1141
+        },
+        "utanç": {
+          "anger": 0.0309,
+          "anticipation": 0.1316,
+          "disgust": 0.0577,
+          "fear": 0.0382,
+          "joy": 0.0859,
+          "negative": 0.3945,
+          "positive": 0.1538,
+          "sadness": 0.2186,
+          "surprise": 0.2334,
+          "trust": 0.0977
+        },
+        "gurur": {
+          "anger": 0.0,
+          "anticipation": 0.2612,
+          "disgust": 0.0472,
+          "fear": 0.0,
+          "joy": 0.1235,
+          "negative": 0.0,
+          "positive": 0.5436,
+          "sadness": 0.0945,
+          "surprise": 0.0,
+          "trust": 0.0884
+        }
+      }
+    },
+    "token_length_stats": {
+      "mean": 31.52,
+      "median": 19.0,
+      "p95": 87.05,
+      "p99": 206.05,
+      "max": 722,
+      "truncated_pct": 2.54
+    }
+  }
+}

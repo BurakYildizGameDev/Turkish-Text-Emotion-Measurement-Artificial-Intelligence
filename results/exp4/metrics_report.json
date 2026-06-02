@@ -1,0 +1,380 @@
+{
+  "experiment": "exp4_master_hybrid",
+  "model": "dbmdz/bert-base-turkish-cased + NRC Lexicon + Cross-Lingual Data",
+  "architecture": "BERTurk[CLS](768) ++ Lexikon(10) -> Linear(778,10)",
+  "data_enhancement": {
+    "cross_lingual_source": "goemotions_tr",
+    "oversample_targets": {
+      "gurur": 3500,
+      "utanç": 4000,
+      "tiksinti": 4000,
+      "korku": 4000,
+      "şaşkınlık": 6000,
+      "öfke": 6000
+    },
+    "cl_weight_multiplier": 2.5
+  },
+  "test_accuracy": 0.8761,
+  "test_f1_macro": 0.4597,
+  "test_f1_weighted": 0.8956,
+  "per_class": {
+    "mutluluk": {
+      "precision": 0.9697,
+      "recall": 0.867,
+      "f1": 0.9155,
+      "support": 41960
+    },
+    "üzüntü": {
+      "precision": 0.7379,
+      "recall": 0.82,
+      "f1": 0.7768,
+      "support": 9947
+    },
+    "öfke": {
+      "precision": 0.2131,
+      "recall": 0.6434,
+      "f1": 0.3202,
+      "support": 802
+    },
+    "korku": {
+      "precision": 0.2032,
+      "recall": 0.6737,
+      "f1": 0.3122,
+      "support": 95
+    },
+    "şaşkınlık": {
+      "precision": 0.263,
+      "recall": 0.7364,
+      "f1": 0.3876,
+      "support": 660
+    },
+    "tiksinti": {
+      "precision": 0.1327,
+      "recall": 0.4713,
+      "f1": 0.2071,
+      "support": 87
+    },
+    "sevgi": {
+      "precision": 0.2535,
+      "recall": 0.8884,
+      "f1": 0.3945,
+      "support": 753
+    },
+    "nötr": {
+      "precision": 0.9908,
+      "recall": 0.9215,
+      "f1": 0.9549,
+      "support": 28183
+    },
+    "utanç": {
+      "precision": 0.1458,
+      "recall": 0.5676,
+      "f1": 0.232,
+      "support": 37
+    },
+    "gurur": {
+      "precision": 0.0533,
+      "recall": 0.5,
+      "f1": 0.0964,
+      "support": 8
+    }
+  },
+  "lexicon_analysis": {
+    "lexicon_only_f1_macro": 0.1343,
+    "lexicon_only_accuracy": 0.2666,
+    "hybrid_f1_macro": 0.4597,
+    "bert_contribution": 0.3254,
+    "per_class_lexicon_profile": {
+      "mutluluk": {
+        "anger": 0.0518,
+        "anticipation": 0.1683,
+        "disgust": 0.011,
+        "fear": 0.042,
+        "joy": 0.2911,
+        "negative": 0.1554,
+        "positive": 0.4239,
+        "sadness": 0.086,
+        "surprise": 0.1064,
+        "trust": 0.128
+      },
+      "üzüntü": {
+        "anger": 0.0591,
+        "anticipation": 0.2483,
+        "disgust": 0.0848,
+        "fear": 0.0924,
+        "joy": 0.1151,
+        "negative": 0.2832,
+        "positive": 0.3027,
+        "sadness": 0.1488,
+        "surprise": 0.1157,
+        "trust": 0.1412
+      },
+      "öfke": {
+        "anger": 0.1139,
+        "anticipation": 0.2087,
+        "disgust": 0.0634,
+        "fear": 0.0516,
+        "joy": 0.0599,
+        "negative": 0.2137,
+        "positive": 0.2092,
+        "sadness": 0.0943,
+        "surprise": 0.0782,
+        "trust": 0.124
+      },
+      "korku": {
+        "anger": 0.0416,
+        "anticipation": 0.1716,
+        "disgust": 0.0391,
+        "fear": 0.4787,
+        "joy": 0.0257,
+        "negative": 0.1501,
+        "positive": 0.1717,
+        "sadness": 0.0573,
+        "surprise": 0.0889,
+        "trust": 0.0934
+      },
+      "şaşkınlık": {
+        "anger": 0.0361,
+        "anticipation": 0.2404,
+        "disgust": 0.0227,
+        "fear": 0.0413,
+        "joy": 0.0601,
+        "negative": 0.15,
+        "positive": 0.1989,
+        "sadness": 0.0984,
+        "surprise": 0.1729,
+        "trust": 0.1255
+      },
+      "tiksinti": {
+        "anger": 0.064,
+        "anticipation": 0.1245,
+        "disgust": 0.326,
+        "fear": 0.0863,
+        "joy": 0.0277,
+        "negative": 0.2521,
+        "positive": 0.1759,
+        "sadness": 0.103,
+        "surprise": 0.1015,
+        "trust": 0.1506
+      },
+      "sevgi": {
+        "anger": 0.0204,
+        "anticipation": 0.1738,
+        "disgust": 0.0144,
+        "fear": 0.0324,
+        "joy": 0.4361,
+        "negative": 0.1218,
+        "positive": 0.2145,
+        "sadness": 0.0815,
+        "surprise": 0.059,
+        "trust": 0.1355
+      },
+      "nötr": {
+        "anger": 0.0271,
+        "anticipation": 0.1641,
+        "disgust": 0.0146,
+        "fear": 0.0321,
+        "joy": 0.0404,
+        "negative": 0.0696,
+        "positive": 0.1887,
+        "sadness": 0.0974,
+        "surprise": 0.0655,
+        "trust": 0.1141
+      },
+      "utanç": {
+        "anger": 0.0309,
+        "anticipation": 0.1316,
+        "disgust": 0.0577,
+        "fear": 0.0382,
+        "joy": 0.0859,
+        "negative": 0.3945,
+        "positive": 0.1538,
+        "sadness": 0.2186,
+        "surprise": 0.2334,
+        "trust": 0.0977
+      },
+      "gurur": {
+        "anger": 0.0,
+        "anticipation": 0.2612,
+        "disgust": 0.0472,
+        "fear": 0.0,
+        "joy": 0.1235,
+        "negative": 0.0,
+        "positive": 0.5436,
+        "sadness": 0.0945,
+        "surprise": 0.0,
+        "trust": 0.0884
+      }
+    }
+  },
+  "training_history": {
+    "epoch": [
+      1.0,
+      2.0
+    ],
+    "train_loss": [
+      0.3825,
+      0.2355
+    ],
+    "val_loss": [
+      0.47075074911117554,
+      0.48120516538619995
+    ],
+    "val_acc": [
+      0.8762540590316483,
+      0.8749818252314254
+    ],
+    "val_f1_macro": [
+      0.45481404882825105,
+      0.4672414869424341
+    ],
+    "val_f1_weighted": [
+      0.895566142227238,
+      0.8942745870906673
+    ],
+    "val_f1_mutluluk": [
+      0.9178044716357034,
+      0.9137616065916622
+    ],
+    "val_f1_üzüntü": [
+      0.7736498279559169,
+      0.772740206772266
+    ],
+    "val_f1_öfke": [
+      0.3306477602320335,
+      0.3404120443740095
+    ],
+    "val_f1_korku": [
+      0.2672413793103448,
+      0.28846153846153844
+    ],
+    "val_f1_şaşkınlık": [
+      0.42792384406165007,
+      0.39334107626790554
+    ],
+    "val_f1_tiksinti": [
+      0.2046908315565032,
+      0.23902439024390243
+    ],
+    "val_f1_sevgi": [
+      0.36475629351901445,
+      0.3985911358966833
+    ],
+    "val_f1_nötr": [
+      0.9520951469180352,
+      0.9540548987884024
+    ],
+    "val_f1_utanç": [
+      0.18811881188118812,
+      0.21818181818181817
+    ],
+    "val_f1_gurur": [
+      0.12121212121212122,
+      0.15384615384615385
+    ]
+  },
+  "comparison": {
+    "exp1": {
+      "f1_macro_ref": 0.3617,
+      "f1_macro_exp4": 0.4597,
+      "f1_macro_delta": 0.098,
+      "per_class_delta": {
+        "mutluluk": 0.0337,
+        "üzüntü": 0.1089,
+        "öfke": 0.1256,
+        "korku": 0.1674,
+        "şaşkınlık": 0.0961,
+        "tiksinti": 0.1206,
+        "sevgi": 0.1089,
+        "nötr": 0.0471,
+        "utanç": 0.1354,
+        "gurur": 0.0362
+      },
+      "egitim_butcesi": {
+        "exp1": {
+          "total_steps": 648,
+          "runtime_min": 7.09,
+          "epochs_logged": 2.0,
+          "veri": "~41k ornek (--max-per-class 10000), 2 epoch"
+        },
+        "exp4": {
+          "total_steps": 954,
+          "runtime_min": 8.06,
+          "epochs_logged": 2.0,
+          "veri": "~61k ornek (max_per_class 10000 + oversample), 2 epoch"
+        }
+      },
+      "karsilastirma_gecerli_mi": true,
+      "not": "Ayni max_per_class ve 2 epoch; fark oversampling + CL agirligi + lexicon toplamidir.",
+      "duzeltme_tarihi": "2026-09-28"
+    },
+    "exp2": {
+      "f1_macro_ref": 0.4629,
+      "f1_macro_exp4": 0.4597,
+      "f1_macro_delta": -0.0032,
+      "per_class_delta": {
+        "mutluluk": 0.0017,
+        "üzüntü": 0.0056,
+        "öfke": -0.0092,
+        "korku": -0.0237,
+        "şaşkınlık": 0.0099,
+        "tiksinti": -0.0123,
+        "sevgi": 0.0014,
+        "nötr": 0.0016,
+        "utanç": 0.0572,
+        "gurur": -0.0636
+      },
+      "egitim_butcesi": {
+        "exp2": {
+          "total_steps": 954,
+          "runtime_min": 8.27,
+          "epochs_logged": 2.0,
+          "veri": "~61k ornek (max_per_class 10000 + oversample), 2 epoch"
+        },
+        "exp4": {
+          "total_steps": 954,
+          "runtime_min": 8.06,
+          "epochs_logged": 2.0,
+          "veri": "~61k ornek (max_per_class 10000 + oversample), 2 epoch"
+        }
+      },
+      "karsilastirma_gecerli_mi": true,
+      "not": "LEXICON ETKISININ TEK GECERLI OLCUMU: exp2 ile exp4 arasindaki tek fark lexicon ozellikleridir ve butceler aynidir. Fark -0.003 civarindadir; tek seed ile lexicon'un olculebilir bir katkisi gorulmemektedir.",
+      "duzeltme_tarihi": "2026-09-28"
+    },
+    "exp3": {
+      "f1_macro_ref": 0.4376,
+      "f1_macro_exp4": 0.4597,
+      "f1_macro_delta": 0.0221,
+      "per_class_delta": {
+        "mutluluk": 0.0675,
+        "üzüntü": 0.1117,
+        "öfke": 0.0103,
+        "korku": -0.0344,
+        "şaşkınlık": 0.0518,
+        "tiksinti": -0.0007,
+        "sevgi": 0.0229,
+        "nötr": 0.0115,
+        "utanç": 0.0337,
+        "gurur": -0.0536
+      },
+      "egitim_butcesi": {
+        "exp3": {
+          "total_steps": 6018,
+          "runtime_min": 30.4,
+          "epochs_logged": 2.0,
+          "veri": "~385k ornek (TAM veri), 2 epoch"
+        },
+        "exp4": {
+          "total_steps": 954,
+          "runtime_min": 8.06,
+          "epochs_logged": 2.0,
+          "veri": "~61k ornek (max_per_class 10000 + oversample), 2 epoch"
+        }
+      },
+      "karsilastirma_gecerli_mi": false,
+      "not": "GECERSIZ KARSILASTIRMA: iki model farkli veri miktari ve adim sayisiyla egitildi; fark yontemden degil egitim butcesinden kaynaklaniyor olabilir.",
+      "duzeltme_tarihi": "2026-09-28"
+    }
+  }
+}
