@@ -1,0 +1,134 @@
+{
+  "generated_at": "2026-04-28T13:54:45.709519",
+  "experiments": {
+    "exp1": {
+      "name": "Exp1 — Baseline",
+      "accuracy": 0.8081834924635293,
+      "f1_macro": 0.361738928146423,
+      "f1_weighted": 0.8459586742800281,
+      "per_class": {
+        "mutluluk": 0.8818,
+        "üzüntü": 0.6679,
+        "öfke": 0.1946,
+        "korku": 0.1448,
+        "şaşkınlık": 0.2915,
+        "tiksinti": 0.0865,
+        "sevgi": 0.2856,
+        "nötr": 0.9078,
+        "utanç": 0.0966,
+        "gurur": 0.0602
+      }
+    },
+    "exp2": {
+      "name": "Exp2 — Cross-Lingual",
+      "accuracy": 0.8743,
+      "f1_macro": 0.4629,
+      "f1_weighted": 0.8936,
+      "per_class": {
+        "mutluluk": 0.9138,
+        "üzüntü": 0.7712,
+        "öfke": 0.3294,
+        "korku": 0.3359,
+        "şaşkınlık": 0.3777,
+        "tiksinti": 0.2194,
+        "sevgi": 0.3931,
+        "nötr": 0.9533,
+        "utanç": 0.1748,
+        "gurur": 0.16
+      }
+    },
+    "exp3": {
+      "name": "Exp3 — Lexicon",
+      "accuracy": 0.8151,
+      "f1_macro": 0.4376,
+      "f1_weighted": 0.8432,
+      "per_class": {
+        "mutluluk": 0.848,
+        "üzüntü": 0.6651,
+        "öfke": 0.3099,
+        "korku": 0.3466,
+        "şaşkınlık": 0.3358,
+        "tiksinti": 0.2078,
+        "sevgi": 0.3716,
+        "nötr": 0.9434,
+        "utanç": 0.1983,
+        "gurur": 0.15
+      }
+    },
+    "exp4": {
+      "name": "Exp4 — Master Hybrid",
+      "accuracy": 0.8761,
+      "f1_macro": 0.4597,
+      "f1_weighted": 0.8956,
+      "per_class": {
+        "mutluluk": 0.9155,
+        "üzüntü": 0.7768,
+        "öfke": 0.3202,
+        "korku": 0.3122,
+        "şaşkınlık": 0.3876,
+        "tiksinti": 0.2071,
+        "sevgi": 0.3945,
+        "nötr": 0.9549,
+        "utanç": 0.232,
+        "gurur": 0.0964
+      }
+    }
+  },
+  "best_overall": {
+    "exp_id": 2,
+    "name": "Exp2 — Cross-Lingual",
+    "f1_macro": 0.4629
+  },
+  "per_emotion_winners": {
+    "mutluluk": {
+      "exp_id": 4,
+      "name": "Exp4 — Master Hybrid",
+      "f1": 0.9155
+    },
+    "üzüntü": {
+      "exp_id": 4,
+      "name": "Exp4 — Master Hybrid",
+      "f1": 0.7768
+    },
+    "öfke": {
+      "exp_id": 2,
+      "name": "Exp2 — Cross-Lingual",
+      "f1": 0.3294
+    },
+    "korku": {
+      "exp_id": 3,
+      "name": "Exp3 — Lexicon",
+      "f1": 0.3466
+    },
+    "şaşkınlık": {
+      "exp_id": 4,
+      "name": "Exp4 — Master Hybrid",
+      "f1": 0.3876
+    },
+    "tiksinti": {
+      "exp_id": 2,
+      "name": "Exp2 — Cross-Lingual",
+      "f1": 0.2194
+    },
+    "sevgi": {
+      "exp_id": 4,
+      "name": "Exp4 — Master Hybrid",
+      "f1": 0.3945
+    },
+    "nötr": {
+      "exp_id": 4,
+      "name": "Exp4 — Master Hybrid",
+      "f1": 0.9549
+    },
+    "utanç": {
+      "exp_id": 4,
+      "name": "Exp4 — Master Hybrid",
+      "f1": 0.232
+    },
+    "gurur": {
+      "exp_id": 2,
+      "name": "Exp2 — Cross-Lingual",
+      "f1": 0.16
+    }
+  }
+}
