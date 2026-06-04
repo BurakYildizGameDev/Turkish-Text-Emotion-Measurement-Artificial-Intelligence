@@ -1,0 +1,5 @@
+﻿Deney,Mimari,Accuracy,F1-Macro,F1-Weighted,mutluluk,üzüntü,öfke,korku,şaşkınlı,tiksinti,sevgi,nötr,utanç,gurur
+Exp1 — Baseline,dbmdz/bert-base-turkish-cased,0.8081834924635293,0.361738928146423,0.8459586742800281,0.8818,0.6679,0.1946,0.1448,0.2915,0.0865,0.2856,0.9078,0.0966,0.0602
+Exp2 — Cross-Lingual,dbmdz/bert-base-turkish-cased,0.8743,0.4629,0.8936,0.9138,0.7712,0.3294,0.3359,0.3777,0.2194,0.3931,0.9533,0.1748,0.16
+Exp3 — Lexicon,BERTurk[CLS](768) ++ Lexikon(10) -> Linear(77,0.8151,0.4376,0.8432,0.848,0.6651,0.3099,0.3466,0.3358,0.2078,0.3716,0.9434,0.1983,0.15
+Exp4 — Master Hybrid,BERTurk[CLS](768) ++ Lexikon(10) -> Linear(77,0.8761,0.4597,0.8956,0.9155,0.7768,0.3202,0.3122,0.3876,0.2071,0.3945,0.9549,0.232,0.0964
