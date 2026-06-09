@@ -1,0 +1,54 @@
+=================================================================
+  EXP1 BASELINE BERTURK — 3-FOLD CV OZET
+=================================================================
+  Model          : dbmdz/bert-base-turkish-cased
+  max_per_class  : 5000
+  Epochs/fold    : 2
+  N Folds        : 3
+  Batch          : 64 x grad_accum=2 = 128 efektif
+
+  --- Her Fold Sonuclari ---
+
+  Fold 1  (train=20,611  val/test=10,306)
+    F1-Makro   : 0.4495
+    Accuracy   : 0.5938
+    F1-Weighted: 0.6057
+    Sure       : 3.1 dakika
+
+  Fold 2  (train=20,611  val/test=10,306)
+    F1-Makro   : 0.4567
+    Accuracy   : 0.5911
+    F1-Weighted: 0.6008
+    Sure       : 3.1 dakika
+
+  Fold 3  (train=20,612  val/test=10,305)
+    F1-Makro   : 0.3615
+    Accuracy   : 0.4682
+    F1-Weighted: 0.4851
+    Sure       : 3.2 dakika
+
+=================================================================
+  --- Ortalama +- Standart Sapma ---
+
+  F1-Makro   : 0.423 +- 0.043
+  Accuracy   : 0.551 +- 0.059
+  F1-Weighted: 0.564 +- 0.056
+
+  Toplam egitim suresi  : 11.2 dakika
+  Fold basina ortalama  : 3.7 dakika
+
+=================================================================
+  --- Sinif Bazli F1 (3-Fold Ortalama) ---
+
+  mutluluk    : 0.817 +- 0.015  ################
+  üzüntü      : 0.723 +- 0.041  ##############
+  öfke        : 0.019 +- 0.017  
+  korku       : 0.288 +- 0.037  #####
+  şaşkınlık   : 0.395 +- 0.219  #######
+  tiksinti    : 0.144 +- 0.039  ##
+  sevgi       : 0.683 +- 0.036  #############
+  nötr        : 0.836 +- 0.051  ################
+  utanç       : 0.142 +- 0.021  ##
+  gurur       : 0.180 +- 0.036  ###
+
+=================================================================
