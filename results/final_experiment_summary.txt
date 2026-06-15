@@ -1,0 +1,25 @@
+==================================================
+DENEY 1 - EXP2 Dogru Repeated Holdout
+==================================================
+Seed  42:  F1-Macro: 0.4816 | F1-Weighted: 0.8938 | Accuracy: 0.8751
+Seed 123:  F1-Macro: 0.4862 | F1-Weighted: 0.8902 | Accuracy: 0.8714
+Seed   7:  F1-Macro: 0.4775 | F1-Weighted: 0.8929 | Accuracy: 0.8744
+ORTALAMA:  F1-Macro: 0.4818 +/- 0.0036 | Accuracy: 0.8736 +/- 0.0016
+
+==================================================
+DENEY 2 - EXP4 Robustness (2 seed)
+==================================================
+Seed  42:  F1-Macro: 0.4749 | Accuracy: 0.8773
+Seed 123:  F1-Macro: 0.4802 | Accuracy: 0.8729
+ORTALAMA:  F1-Macro: 0.4776 +/- 0.0027
+
+==================================================
+DENEY 3 - Kaynak Disi Test
+==================================================
+Train kaynaklari: ['winvoker', 'fthbrmnby', 'ttc4900', 'mteb_product', 'mteb_movie']
+Test kaynagi    : GoEmotions TR (hic gorulmemis)
+F1-Macro   : 0.0950
+F1-Weighted: 0.2334
+Accuracy   : 0.2824
+Train ornegi: 90,000 | Test ornegi: 42,747
+==================================================
