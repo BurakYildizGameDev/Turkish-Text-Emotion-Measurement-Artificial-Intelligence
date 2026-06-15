@@ -1,0 +1,60 @@
+=================================================================
+  EXP1 BASELINE BERTURK — 4-FOLD CV ÖZET
+=================================================================
+  Model          : dbmdz/bert-base-turkish-cased
+  max_per_class  : 5000
+  Epochs/fold    : 2
+  N Folds        : 4
+  Batch          : 64 x grad_accum=2 = 128 efektif
+
+  --- Her Fold Sonuçları ---
+
+  Fold 1  (train=23,187  val/test=7,730)
+    F1-Macro   : 0.4796
+    Accuracy   : 0.6211
+    F1-Weighted: 0.6313
+    Süre       : 3.4 dakika
+
+  Fold 2  (train=23,188  val/test=7,729)
+    F1-Macro   : 0.4767
+    Accuracy   : 0.6139
+    F1-Weighted: 0.6349
+    Süre       : 3.4 dakika
+
+  Fold 3  (train=23,188  val/test=7,729)
+    F1-Macro   : 0.4573
+    Accuracy   : 0.5809
+    F1-Weighted: 0.6019
+    Süre       : 3.4 dakika
+
+  Fold 4  (train=23,188  val/test=7,729)
+    F1-Macro   : 0.4499
+    Accuracy   : 0.5908
+    F1-Weighted: 0.6148
+    Süre       : 3.4 dakika
+
+=================================================================
+  --- Ortalama ± Standart Sapma ---
+
+  F1-Macro   : 0.466 ± 0.013
+  Accuracy   : 0.602 ± 0.016
+  F1-Weighted: 0.621 ± 0.013
+
+  Toplam süre        : 15.7 dakika
+  Fold başına ortalama: 3.9 dakika
+
+=================================================================
+  --- Sınıf Bazlı F1 (4-Fold Ortalama) ---
+
+  mutluluk    : 0.829 ± 0.004  ################
+  üzüntü      : 0.754 ± 0.018  ###############
+  öfke        : 0.071 ± 0.050  #
+  korku       : 0.303 ± 0.039  ######
+  şaşkınlık   : 0.568 ± 0.033  ###########
+  tiksinti    : 0.153 ± 0.011  ###
+  sevgi       : 0.714 ± 0.017  ##############
+  nötr        : 0.903 ± 0.009  ##################
+  utanç       : 0.167 ± 0.009  ###
+  gurur       : 0.196 ± 0.053  ###
+
+=================================================================
