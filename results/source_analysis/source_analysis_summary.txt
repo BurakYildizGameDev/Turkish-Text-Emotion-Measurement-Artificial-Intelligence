@@ -1,0 +1,83 @@
+======================================================================
+KAYNAK BAZLI HATA ANALİZİ — EXP4 ÖZET BULGULAR
+======================================================================
+Analiz tarihi : 2026-05-01
+Test seti boyutu: 82,532 örnek
+
+──────────────────────────────────────────────────────────────────────
+1. KAYNAK BAZLI GENEL METRİKLER
+──────────────────────────────────────────────────────────────────────
+  fthbrmnby           : n=    12  Hata=0.167  F1-Macro=0.5222  F1-Weighted=0.8611
+  goemotions_tr       : n= 6,430  Hata=0.692  F1-Macro=0.2547  F1-Weighted=0.2115
+  mteb_movie          : n= 1,607  Hata=0.106  F1-Macro=0.2244  F1-Weighted=0.8977
+  mteb_product        : n=   769  Hata=0.263  F1-Macro=0.7256  F1-Weighted=0.7237
+  ttc4900             : n=   701  Hata=0.060  F1-Macro=0.3230  F1-Weighted=0.9691
+  winvoker            : n=73,013  Hata=0.073  F1-Macro=0.2712  F1-Weighted=0.9386
+
+──────────────────────────────────────────────────────────────────────
+2. GOEMOTİONS_TR vs WİNVOKER KARŞILAŞTIRMASI
+──────────────────────────────────────────────────────────────────────
+  GoEmotions_TR hata oranı : 0.692
+  winvoker      hata oranı : 0.073
+  GoEmotions_TR hata oranı winvoker'a göre 9.43 kat yüksek.
+  GoEmotions_TR F1-Macro   : 0.2547
+  winvoker      F1-Macro   : 0.2712
+  F1-Macro farkı (win - go): +0.0165
+
+──────────────────────────────────────────────────────────────────────
+3. EN ÇOK KARIŞTIRMA OLAN KAYNAK × SINIF ÇİFTLERİ (top 10)
+──────────────────────────────────────────────────────────────────────
+  goemotions_tr        | üzüntü       | n=  352 | hata=0.980 | → öfke (134x)
+  goemotions_tr        | mutluluk     | n= 1764 | hata=0.976 | → sevgi (862x)
+  goemotions_tr        | nötr         | n= 1872 | hata=0.930 | → öfke (671x)
+  goemotions_tr        | tiksinti     | n=   87 | hata=0.529 | → öfke (23x)
+  goemotions_tr        | gurur        | n=    8 | hata=0.500 | → sevgi (3x)
+  mteb_product         | üzüntü       | n=  397 | hata=0.486 | → mutluluk (193x)
+  goemotions_tr        | utanç        | n=   37 | hata=0.432 | → tiksinti (6x)
+  goemotions_tr        | öfke         | n=  802 | hata=0.357 | → şaşkınlık (97x)
+  goemotions_tr        | korku        | n=   95 | hata=0.326 | → öfke (10x)
+  goemotions_tr        | şaşkınlık    | n=  660 | hata=0.264 | → öfke (82x)
+
+──────────────────────────────────────────────────────────────────────
+4. WİNVOKER BASKÍN SINIFLAR (mutluluk, nötr) — KAYNAK KARŞILAŞTIRMASI
+──────────────────────────────────────────────────────────────────────
+
+  Sınıf: mutluluk
+    mteb_product        : n=   372  hata=0.024
+    winvoker            : n=39,024  hata=0.096
+    fthbrmnby           : n=    10  hata=0.100
+    mteb_movie          : n=   790  hata=0.142
+    goemotions_tr       : n= 1,764  hata=0.976
+
+  Sınıf: nötr
+    winvoker            : n=25,610  hata=0.017
+    ttc4900             : n=   701  hata=0.060
+    goemotions_tr       : n= 1,872  hata=0.930
+
+──────────────────────────────────────────────────────────────────────
+5. MAKALE İÇİN GENIŞLETILMIŞ KAYNAK TABLOSU (Bölüm 3.1)
+──────────────────────────────────────────────────────────────────────
+Kaynak               | Tür                  | Örnek Sayısı   | Etiketleme                 | Tahmini Gürültü | Test Hata Oranı  | F1-Macro  
+-------------------------------------------------------------------------------------------------------------------------------------------
+fthbrmnby            | Ürün Yorumu          |             12 | Otomatik (sözlük)          | Orta            |            0.167 |     0.5222
+goemotions_tr        | Sosyal Medya (TR)    |          6,430 | İnsan (EN→TR çeviri)       | Yüksek          |            0.692 |     0.2547
+mteb_movie           | Film Yorumu          |          1,607 | Otomatik (sözlük)          | Orta            |            0.106 |     0.2244
+mteb_product         | Ürün Yorumu          |            769 | Otomatik (sözlük)          | Orta            |            0.263 |     0.7256
+ttc4900              | Haber                |            701 | Kategori→Nötr              | Düşük           |            0.060 |     0.3230
+winvoker             | Ürün Yorumu          |         73,013 | Otomatik (sözlük)          | Orta            |            0.073 |     0.2712
+
+──────────────────────────────────────────────────────────────────────
+6. SINIF BAZLI F1 (KAYNAK × SINIF)
+──────────────────────────────────────────────────────────────────────
+Kaynak               | mutlul   | üzüntü   | öfke     | korku    | şaşkın   | tiksin   | sevgi    | nötr     | utanç    | gurur   
+----------------------------------------------------------------------------------------------------------------------------------
+fthbrmnby            |   0.9000 |   0.6667 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000
+goemotions_tr        |   0.0470 |   0.0363 |   0.3909 |   0.3938 |   0.4432 |   0.2492 |   0.4665 |   0.1269 |   0.2500 |   0.1429
+mteb_movie           |   0.8927 |   0.9025 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000
+mteb_product         |   0.7823 |   0.6689 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000
+ttc4900              |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.9691 |   0.0000 |   0.0000
+winvoker             |   0.9391 |   0.7851 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.0000 |   0.9881 |   0.0000 |   0.0000
+
+======================================================================
+Tüm çıktılar: results/source_analysis/
+======================================================================
