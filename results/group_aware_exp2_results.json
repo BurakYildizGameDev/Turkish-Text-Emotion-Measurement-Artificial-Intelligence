@@ -1,0 +1,83 @@
+{
+  "experiment": "exp2_group_aware",
+  "splits": "group_aware_splits",
+  "parameters": {
+    "max_length": 64,
+    "batch_size": 64,
+    "max_per_class": 30000,
+    "epochs": 2,
+    "bf16": true,
+    "lr": 2e-05,
+    "seed": 42
+  },
+  "data": {
+    "train": 96385,
+    "val": 16901,
+    "test": 17093
+  },
+  "test_accuracy": 0.6657,
+  "test_f1_macro": 0.4734,
+  "test_f1_weighted": 0.6994,
+  "per_class": {
+    "mutluluk": {
+      "precision": 0.9562,
+      "recall": 0.5933,
+      "f1": 0.7323,
+      "support": 6993
+    },
+    "üzüntü": {
+      "precision": 0.6252,
+      "recall": 0.8229,
+      "f1": 0.7106,
+      "support": 2433
+    },
+    "öfke": {
+      "precision": 0.2781,
+      "recall": 0.69,
+      "f1": 0.3964,
+      "support": 800
+    },
+    "korku": {
+      "precision": 0.3245,
+      "recall": 0.5158,
+      "f1": 0.3984,
+      "support": 95
+    },
+    "şaşkınlık": {
+      "precision": 0.3239,
+      "recall": 0.7693,
+      "f1": 0.4559,
+      "support": 672
+    },
+    "tiksinti": {
+      "precision": 0.25,
+      "recall": 0.4483,
+      "f1": 0.321,
+      "support": 87
+    },
+    "sevgi": {
+      "precision": 0.3302,
+      "recall": 0.8781,
+      "f1": 0.4799,
+      "support": 763
+    },
+    "nötr": {
+      "precision": 0.964,
+      "recall": 0.6487,
+      "f1": 0.7755,
+      "support": 5206
+    },
+    "utanç": {
+      "precision": 0.2059,
+      "recall": 0.5676,
+      "f1": 0.3022,
+      "support": 37
+    },
+    "gurur": {
+      "precision": 0.1,
+      "recall": 0.4286,
+      "f1": 0.1622,
+      "support": 7
+    }
+  }
+}

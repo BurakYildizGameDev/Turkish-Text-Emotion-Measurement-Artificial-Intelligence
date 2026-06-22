@@ -1,0 +1,84 @@
+{
+  "experiment": "exp4_group_aware",
+  "splits": "group_aware_splits",
+  "parameters": {
+    "max_length": 64,
+    "batch_size": 64,
+    "max_per_class": 30000,
+    "epochs": 2,
+    "bf16": true,
+    "lr": 2e-05,
+    "seed": 42
+  },
+  "data": {
+    "train": 96385,
+    "val": 16901,
+    "test": 17093
+  },
+  "test_accuracy": 0.6738,
+  "test_f1_macro": 0.4706,
+  "test_f1_weighted": 0.7075,
+  "per_class": {
+    "mutluluk": {
+      "precision": 0.956,
+      "recall": 0.6095,
+      "f1": 0.7444,
+      "support": 6993
+    },
+    "üzüntü": {
+      "precision": 0.6399,
+      "recall": 0.8282,
+      "f1": 0.722,
+      "support": 2433
+    },
+    "öfke": {
+      "precision": 0.2816,
+      "recall": 0.69,
+      "f1": 0.4,
+      "support": 800
+    },
+    "korku": {
+      "precision": 0.2775,
+      "recall": 0.5053,
+      "f1": 0.3582,
+      "support": 95
+    },
+    "şaşkınlık": {
+      "precision": 0.3378,
+      "recall": 0.756,
+      "f1": 0.4669,
+      "support": 672
+    },
+    "tiksinti": {
+      "precision": 0.2062,
+      "recall": 0.3793,
+      "f1": 0.2672,
+      "support": 87
+    },
+    "sevgi": {
+      "precision": 0.3307,
+      "recall": 0.8807,
+      "f1": 0.4809,
+      "support": 763
+    },
+    "nötr": {
+      "precision": 0.9659,
+      "recall": 0.6537,
+      "f1": 0.7797,
+      "support": 5206
+    },
+    "utanç": {
+      "precision": 0.236,
+      "recall": 0.5676,
+      "f1": 0.3333,
+      "support": 37
+    },
+    "gurur": {
+      "precision": 0.0889,
+      "recall": 0.5714,
+      "f1": 0.1538,
+      "support": 7
+    }
+  },
+  "lexicon_dim": 10
+}
