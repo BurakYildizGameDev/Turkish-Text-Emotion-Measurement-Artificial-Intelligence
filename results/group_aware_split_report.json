@@ -1,0 +1,56 @@
+{
+  "params": {
+    "num_perm": 64,
+    "threshold": 0.85,
+    "num_bands": 16,
+    "rows_per_band": 4,
+    "max_per_source": 50000,
+    "batch_size": 10000,
+    "seed": 42
+  },
+  "dataset": {
+    "total_after_sampling": 113079,
+    "orig_train": 79011,
+    "orig_val_test": 34068
+  },
+  "deduplication": {
+    "candidate_pairs": 20127,
+    "verified_pairs": 20127,
+    "total_groups": 106140,
+    "singleton_groups": 103807,
+    "non_singleton_groups": 2333,
+    "examples_in_groups": 9272
+  },
+  "split_result": {
+    "train": 79085,
+    "val": 16901,
+    "test": 17093,
+    "group_leak": 0,
+    "exact_dup_train_test": 35
+  },
+  "class_dist_test_original": {
+    "mutluluk": 41960,
+    "notr": 28183,
+    "uzuntu": 9947,
+    "ofke": 802,
+    "sevgi": 753,
+    "saskınlık": 660,
+    "korku": 95,
+    "tiksinti": 87,
+    "utanc": 37,
+    "gurur": 8
+  },
+  "class_dist_test_new": {
+    "mutluluk": 6993,
+    "notr": 5206,
+    "uzuntu": 2433,
+    "ofke": 800,
+    "sevgi": 763,
+    "saskınlık": 672,
+    "korku": 95,
+    "tiksinti": 87,
+    "utanc": 37,
+    "gurur": 7
+  },
+  "total_elapsed_s": 22.1
+}
