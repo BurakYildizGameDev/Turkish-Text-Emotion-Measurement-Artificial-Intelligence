@@ -1,0 +1,181 @@
+========================================================
+ONARIM ÖZETİ — Türkçe Duygu Analizi Projesi
+Tarih: 2026-06-14
+========================================================
+
+ONARIM 1 — EXP3 Yanlış Referans Değeri
+  Dosya   : results/exp3/metrics_report.json
+  Değişim : "f1_macro_ref" 0.4427 → 0.3617 (gerçek EXP1 değeri)
+             "f1_macro_delta" -0.0051 → +0.0759 (= 0.4376 - 0.3617)
+             Düzeltme notu eklendi: referans hatası ve doğru delta açıklandı
+  Etki    : NRC Lexicon'un EXP1'e katkısı negatif değil; +0.076'lık anlamlı
+             iyileştirme sunuyor. Önceki değer yanıltıcı bir sonuç üretiyordu.
+
+ONARIM 2 — EXP0 Yanıltıcı Not
+  Dosya   : results/exp0/metrics_report.json
+  Değişim : "note" alanı güncellendi
+  Eski    : "Pozitif delta = WeightedRandomSampler iyileştirme sağlamış"
+  Yeni    : WeightedRandomSampler'ın genel F1-Macro'yu 0.3770 → 0.3617'ye
+             düşürdüğünü (−0.0153) ancak korku/tiksinti/utanç/gurur sınıflarında
+             F1=0.000'dan öğrenmeye başlama katkısı sağladığını belirtir.
+  Etki    : Bilinçli metodolojik trade-off doğru biçimde belgelendi.
+
+ONARIM 3 — İstatistiksel Test Yorumları + EXP1 vs EXP2
+  Dosya   : results/statistical_tests/statistical_tests.json
+  Değişim A: EXP2 vs EXP4 — McNemar/Bootstrap çelişkisi açıklandı.
+              McNemar p=0.0005 (yapısal hata farkı) ile Bootstrap CI [-0.012,+0.005]
+              (F1-Macro farkı anlamsız) çelişmediği; farklı şeyler ölçtüğü belirtildi.
+  Değişim B: EXP1 vs EXP2 yeni girişi eklendi (hesaplama: test_preds.npy dosyaları):
+              - McNemar: stat=3987.81, p≈0 (anlamlı, p<0.001)
+              - Kontenjans tablosu: a=65698, b=6459, c=1003, d=9372
+              - Bootstrap CI (n=10000, seed=42): mean=+0.101, [+0.089, +0.113]
+              - Her iki test de tutarlı: EXP2 EXP1'den istatistiksel olarak üstün.
+
+ONARIM 4 — data_engine.py Yorum Hatası
+  Dosya   : data_engine.py satır 17
+  Değişim : "fp16=True" → "bf16=True (fp16 değil)"
+             config.yaml:52 referansı eklendi
+  Etki    : Donanım optimizasyon notları tutarlı hale getirildi.
+
+ONARIM 5 — Sampler Ağırlık İndeks Uyumsuzluğu
+  Dosya   : data_engine.py (make_splits + TurkishEmotionDataset docstring)
+  Değişim A: make_splits() — split sonrası orijinal master-dataset indekslerini
+              train/val/test_orig_indices.npy dosyalarına kaydediyor.
+  Değişim B: TurkishEmotionDataset docstring örneği — weights[df_train.index]
+              yerine weights[train_orig_idx] (npy dosyasından yüklenen) kullanıyor.
+  Etki    : reset_index(drop=True) sonrası yanlış sampler ağırlığı ataması önlendi.
+
+ONARIM 6 — Near-Duplicate Kontrol Scripti
+  Dosya   : check_near_duplicates.py (yeni, proje kökü)
+  İçerik  : TF-IDF tabanlı cosine similarity ile kaynak-içi ve cross-split
+              near-duplicate taraması. Veriyi değiştirmez; sadece raporlar.
+              Rapor çıktısı: results/near_duplicate_report.json
+  Kullanım: python check_near_duplicates.py
+
+ONARIM 7 — GoEmotions TR Kalite Filtresi (Pasif)
+  Dosya   : data_engine.py, load_goemotions_tr() fonksiyonu
+  Değişim : Fonksiyon sonuna pasif yorum blokları eklendi:
+              - Türkçe karakter oranı filtresi (bozuk çeviri tespiti)
+              - Minimum sözcük sayısı filtresi (15 sözcük)
+              - Multi-label önceliklendirme notu
+  Kullanım: # işaretlerini kaldırarak aktif edilebilir. GPU gerektirmez.
+
+ONARIM 8 — Fine-Tuned Baseline Script
+  Dosya   : baseline_finetuned.py (yeni, proje kökü)
+  İçerik  : mBERT, XLM-RoBERTa, ELECTRA-TR modellerini EXP1 ile aynı split
+              üzerinde fine-tune eden script.
+  --run yoksa: Kuru çalışma (veri/config kontrolü, GPU işlemi yok)
+  --run ile : Gerçek eğitim (~3-4 saat RTX 5070 Ti)
+  Çıktı   : results/baselines/<model>/test_results.json
+              results/baselines/baseline_comparison_finetuned.json
+
+ONARIM 9 — Sınıf Eşleme Tablosu JSON
+  Dosya   : results/label_mapping_27to10.json (yeni)
+  İçerik  : GoEmotions 28 sınıf → 10 Türkçe sınıf eşleme tablosu;
+              birleştirilen etiketler, kaldırılan etiket (yok),
+              tartışmalı eşlemeler (confusion/curiosity/realization → şaşkınlık)
+              ve çok-etiket işleme notu.
+
+ONARIM 10 — run_summary.json Güncelleme
+  Dosya   : results/run_summary.json
+  Değişim : revision="v2", revision_date, revision_reason, status,
+              pending_runs listesi, completed_fixes listesi eklendi.
+  Etki    : Proje durumu ve bekleyen işler izlenebilir hale getirildi.
+
+========================================================
+BEKLEYEN İŞLEMLER (kod onarımı dışı — GPU/hesaplama gerektirir)
+========================================================
+1. python baseline_finetuned.py --run
+   — mBERT, XLM-RoBERTa, ELECTRA-TR fine-tune (~3-4 saat)
+   — Gerçek baseline karşılaştırması için zorunlu
+
+2. python check_near_duplicates.py
+   — Near-duplicate/sızıntı analizi (~10-20 dk, GPU gerektirmez)
+   — data/processed/master_dataset.parquet gerekli
+
+3. Cross-validation EXP2, EXP3, EXP4 için
+   — kfold_results.json şablonu kullanılarak yazılabilir
+   — Her deney için ~2-3 saat eğitim
+
+4. load_goemotions_tr() kalite filtresi aktivasyonu
+   — data_engine.py'deki yorum satırlarını kaldır
+   — Veri yeniden derle ve split oluştur
+
+5. İstatistiksel testler EXP0 dahil edilecek
+   — EXP0 vs EXP1, EXP0 vs EXP2 karşılaştırmaları eksik
+
+========================================================
+DEĞİŞTİRİLEN DOSYALAR
+========================================================
+  GÜNCELLENEN:
+  - results/exp3/metrics_report.json
+  - results/exp0/metrics_report.json
+  - results/statistical_tests/statistical_tests.json
+  - results/run_summary.json
+  - data_engine.py
+
+  YENİ OLUŞTURULAN:
+  - check_near_duplicates.py
+  - baseline_finetuned.py
+  - results/label_mapping_27to10.json
+  - summary_of_fixes.txt (bu dosya)
+
+========================================================
+NOT: Hiçbir eğitim başlatılmamış, model çalıştırılmamış,
+GPU işlemi yapılmamıştır. Tüm değişiklikler kod, JSON
+ve config düzeyinde kalmaktadır.
+========================================================
+
+========================================================
+REVİZYON v3 — ÖNCEKİ ONARIMLARIN DÜZELTİLMESİ
+Tarih: 2026-09-28
+========================================================
+Aşağıdaki maddeler, yukarıdaki onarımların bir kısmının hatalı veya
+doğrulanamaz olduğunu kayda geçirir. Tüm sayılar results/exp*/test_preds.npy
+ve test_labels.npy dosyalarından yeniden hesaplanmıştır.
+
+ONARIM 1 — HATALI (geri alındı ve yeniden hesaplandı)
+  EXP3 ile EXP1 farklı eğitim bütçeleriyle koşulmuştur:
+    exp1: ~41k örnek (--max-per-class 10000), 648 adım, 7 dk
+    exp3: ~385k örnek (tam veri),             6018 adım, 30 dk
+  "+0.0759 lexicon katkısı" yorumu bu nedenle geçersizdir. Ayrıca aynı
+  bloktaki per_class_delta değerleri elle düzeltilmemiş, eski 0.4427
+  referansına göre kalmıştı (ör. mutluluk: dosyada -0.0013, gerçek -0.0338).
+  Lexicon etkisinin tek geçerli ölçümü exp4 vs exp2'dir (aynı bütçe):
+  F1-Macro farkı -0.0032 → tek seed ile ölçülebilir katkı yok.
+  results/exp3 ve exp4 metrics_report.json karşılaştırmaları yeniden yazıldı;
+  her karşılaştırmada "karsilastirma_gecerli_mi" ve "egitim_butcesi" alanları var.
+
+ONARIM 2 — EKSİK (düzeltildi)
+  exp0 max_steps=500 ile yalnızca ~0.17 epoch eğitilmiştir. exp1 ile
+  karşılaştırması geçersizdir; "WeightedRandomSampler F1'i düşürdü" sonucu
+  bu iki çalışmadan çıkarılamaz. Nottaki sayılar da hatalıydı
+  (0.3770/-0.0153 yazıyordu, gerçek 0.3774/-0.0157).
+
+ONARIM 3 — DOĞRULANAMAZ
+  results/statistical_tests/ klasörü repoda yoktur; McNemar/Bootstrap
+  sonuçları kontrol edilemez. Ayrıca EXP1 vs EXP2 karşılaştırması tek seed
+  ile yapılmıştır. Testler Faz 5'te yeniden koşulacaktır.
+
+ONARIM 4 — YALNIZCA YORUM DEĞİŞTİ
+  Tüm train_exp*.py scriptleri hâlâ fp16=True kullanmaktadır. config.yaml'daki
+  bf16 ayarı eğitim scriptleri tarafından okunmaz. Faz 4'te ele alınacak.
+
+ONARIM 5 — ETKİSİZ
+  train_exp*.py scriptleri data_engine.make_splits() kullanmaz; *_orig_indices.npy
+  dosyaları hiçbir eğitimde kullanılmamıştır.
+
+EK DÜZELTMELER (v3)
+  - clean_test_results.json: exp3/exp4 "original" alanında augmented test
+    sonuçları (0.5389 / 0.5607) yazıyordu → gerçek değerler (0.4376 / 0.4597).
+    Bu dosyayı üreten script repoda yoktur.
+  - clean_exp*_results.json: "experiment" alanı yanlışlıkla "_augmented_eval"
+    idi → "_clean_eval".
+  - augmented_*.json: iyileşmenin modelden değil test setine eklenen şablon
+    cümlelerden geldiğini belirten "_uyari" alanı eklendi.
+  - models/Final ve models/checkpoint-* kaldırıldı: bunlar başka bir projeye
+    ait 3 sınıflı (mutluluk/korku/üzüntü) modellerdir; 10 sınıflı sonuçlarla
+    ilgisi yoktur.
+  - logs/test_metrics.json ve logs/confusion_matrix.png kaldırıldı: aynı 3
+    sınıflı modelin çıktılarıdır.
+========================================================
