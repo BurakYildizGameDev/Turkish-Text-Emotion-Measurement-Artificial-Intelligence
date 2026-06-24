@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-04-18T23:24:08.199602",
+  "total_seconds": 0.0,
+  "results": {
+    "1": {
+      "status": "dry-run"
+    },
+    "2": {
+      "status": "dry-run"
+    },
+    "3": {
+      "status": "dry-run"
+    },
+    "4": {
+      "status": "dry-run"
+    }
+  },
+  "f1_ranking": [],
+  "revision": "v3",
+  "revision_date": "2026-09-28",
+  "revision_reason": "v2 onarimlarinin bir kismi hatali veya dogrulanamaz cikti — bkz. summary_of_fixes.txt 'REVIZYON v3'",
+  "status": "sonuclar_yeniden_hesaplandi_egitim_bekliyor",
+  "pending_runs": [
+    "baseline_finetuned.py --run  (mBERT, XLM-R, ELECTRA-TR fine-tune — tahmini 3-4 saat)",
+    "check_near_duplicates.py     (near-dup analizi — ~10-20 dk, GPU gerektirmez)",
+    "cross_validation EXP2/3/4    (henüz yazılmadı — EXP1 kfold şablonundan türetilebilir)"
+  ],
+  "completed_fixes": [
+    "[v3: gecersiz/dogrulanamaz — bkz. v3_notes] EXP3 f1_macro_ref 0.4427 → 0.3617 düzeltildi, delta -0.0051 → +0.0759 güncellendi",
+    "EXP0 yanıltıcı 'iyileştirme sağlamış' notu gerçek trade-off açıklamasıyla değiştirildi",
+    "[v3: gecersiz/dogrulanamaz — bkz. v3_notes] EXP2 vs EXP4 istatistiksel test yorumu güncellendi: McNemar/Bootstrap çelişkisi açıklandı",
+    "[v3: gecersiz/dogrulanamaz — bkz. v3_notes] EXP1 vs EXP2 istatistiksel test hesaplanıp eklendi (McNemar p≈0, Bootstrap CI [+0.089,+0.113])",
+    "[v3: gecersiz/dogrulanamaz — bkz. v3_notes] data_engine.py:17 fp16 yorum hatası düzeltildi (bf16=True, config.yaml:52 referansı eklendi)",
+    "[v3: gecersiz/dogrulanamaz — bkz. v3_notes] make_splits() orijinal indeksleri *_orig_indices.npy dosyalarına kaydedecek şekilde güncellendi",
+    "TurkishEmotionDataset docstring örneği doğru indeks kullanımı için düzeltildi",
+    "check_near_duplicates.py oluşturuldu (kaynak-içi ve cross-split sızıntı taraması)",
+    "load_goemotions_tr() içine kalite filtresi pasif yorum bloğu eklendi",
+    "baseline_finetuned.py oluşturuldu (--run olmadan GPU işlemi başlatmaz)",
+    "results/label_mapping_27to10.json oluşturuldu (28→10 eşleme tablosu + tartışmalı eşlemeler)",
+    "run_summary.json güncellendi (v2)"
+  ],
+  "v3_notes": {
+    "EXP3 f1_macro_ref": "Hatali: exp3 ve exp1 farkli egitim butcesiyle kosuldu, karsilastirma gecersiz. Lexicon etkisi yalnizca exp4 vs exp2 ile olculebilir (-0.0032).",
+    "EXP2 vs EXP4 / EXP1 vs EXP2 istatistik testleri": "Dogrulanamaz: results/statistical_tests/ repoda yok.",
+    "make_splits() orijinal indeksler": "Etkisiz: egitim scriptleri data_engine.make_splits() kullanmiyor.",
+    "data_engine.py:17 fp16/bf16": "Yalnizca yorum degisti; egitim scriptleri hala fp16=True."
+  }
+}
