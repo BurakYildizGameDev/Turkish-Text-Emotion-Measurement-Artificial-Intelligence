@@ -1,3 +1,4 @@
+# Commit 184: fix(baseline): update load_lexicon_bert_weights with strict key checking
 """
 Fine-Tuned Baseline Karşılaştırma Scripti
 ==========================================
