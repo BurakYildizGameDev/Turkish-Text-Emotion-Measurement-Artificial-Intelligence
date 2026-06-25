@@ -1,4 +1,4 @@
 # Türkçe Metin Duygu Analizi
 
-## v1 Sınırlılıkları
-Gurur ve utanç sınıfları yetersiz veri nedeniyle elenmelidir.
+## v2 Geçiş Gerekçesi
+Gurur ve utanç sınıfları elenerek 8 sınıfa odaklanılmaktadır.
