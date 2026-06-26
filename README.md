@@ -1,4 +1,3 @@
-# Türkçe Metin Duygu Analizi
+# Türkçe Metin Duygu Analizi (v2)
 
-## v2 Geçiş Gerekçesi
-Gurur ve utanç sınıfları elenerek 8 sınıfa odaklanılmaktadır.
+8 Sınıflı Temiz Mimari Tasarımı
