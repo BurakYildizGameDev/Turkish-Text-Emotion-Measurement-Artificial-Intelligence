@@ -1,1 +1,1 @@
-# src/data/sources.py - TREMO consensus parser
+# src/data/sources.py - Tweet emotion loader
