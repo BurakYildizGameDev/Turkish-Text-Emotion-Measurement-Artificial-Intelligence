@@ -1,3 +1,4 @@
+# Commit 199: feat(v2/data): integrate MinHash-LSH near-duplicate clustering into build_v2.py
 """
 v2 veri seti derleyicisi — 8 sınıflı Türkçe duygu veri seti.
 
