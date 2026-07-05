@@ -1,0 +1,381 @@
+{
+  "seed": 42,
+  "etiketler": [
+    "mutluluk",
+    "üzüntü",
+    "öfke",
+    "korku",
+    "şaşkınlık",
+    "tiksinti",
+    "sevgi",
+    "nötr"
+  ],
+  "parametreler": {
+    "lsh_threshold": 0.8,
+    "num_perm": 128,
+    "shingle_char": 5,
+    "weak_max_chars": 500
+  },
+  "kaynak_ham": {
+    "tremo": {
+      "kalan": 25989,
+      "tremo/consensus": 19462,
+      "tremo/majority": 6527
+    },
+    "tweet_emotion": {
+      "kalan": 3998
+    },
+    "goemotions_tr": {
+      "toplam_tr": 43410,
+      "atilan_etiket_iceriyor": 8235,
+      "celiskili_cok_etiket": 2606,
+      "kalan": 32558
+    }
+  },
+  "gold_tekillestirme": {
+    "celiskili_etiket_ornek": 646,
+    "celiskili_etiket_metin": 135,
+    "tam_kopya_atilan": 2692
+  },
+  "yakin_kopya": {
+    "grup_sayisi": 58660,
+    "coklu_grup": 462,
+    "coklu_gruptaki_ornek": 1009
+  },
+  "weak_ham": {
+    "toplam": 563570,
+    "kaynak": {
+      "fthbrmnby": 232257,
+      "winvoker/urun_yorumlari": 231682,
+      "winvoker/HUMIR": 64541,
+      "winvoker/tweet-pn": 10702,
+      "mteb_movie": 10498,
+      "winvoker/magaza_yorumlari": 8291,
+      "mteb_product": 5599
+    },
+    "uzunluk_filtresi_sonrasi": 541966,
+    "film_korku_atilan": 148,
+    "etiketlenen": 190483
+  },
+  "ek_egitim_verisi": {
+    "weak": {
+      "baslangic": 190483,
+      "celiskili_etiket_ornek": 0,
+      "celiskili_etiket_metin": 0,
+      "tam_kopya_atilan": 85254,
+      "gold_ile_tam_kopya": 18,
+      "val_test_ile_yakin_kopya": 0,
+      "kalan": 105211
+    },
+    "silver": {
+      "baslangic": 32292,
+      "celiskili_etiket_ornek": 0,
+      "celiskili_etiket_metin": 0,
+      "tam_kopya_atilan": 2,
+      "gold_ile_tam_kopya": 4160,
+      "val_test_ile_yakin_kopya": 248,
+      "kalan": 27882
+    }
+  },
+  "dagilim": {
+    "train": {
+      "toplam": 41465,
+      "sinif": {
+        "mutluluk": 10256,
+        "üzüntü": 5153,
+        "öfke": 6654,
+        "korku": 3561,
+        "şaşkınlık": 3036,
+        "tiksinti": 2549,
+        "sevgi": 1403,
+        "nötr": 8853
+      },
+      "kaynak_sinif": {
+        "goemotions_tr": {
+          "nötr": 8853,
+          "mutluluk": 6388,
+          "öfke": 3013,
+          "üzüntü": 1416,
+          "sevgi": 1403,
+          "şaşkınlık": 485,
+          "korku": 385,
+          "tiksinti": 345
+        },
+        "tremo/consensus": {
+          "mutluluk": 2817,
+          "üzüntü": 2296,
+          "öfke": 2170,
+          "korku": 1994,
+          "tiksinti": 1679,
+          "şaşkınlık": 1365
+        },
+        "tremo/majority": {
+          "öfke": 922,
+          "üzüntü": 894,
+          "şaşkınlık": 649,
+          "korku": 637,
+          "tiksinti": 525,
+          "mutluluk": 495
+        },
+        "tweet_emotion": {
+          "mutluluk": 556,
+          "öfke": 549,
+          "üzüntü": 547,
+          "korku": 545,
+          "şaşkınlık": 537
+        }
+      }
+    },
+    "val": {
+      "toplam": 8867,
+      "sinif": {
+        "mutluluk": 2186,
+        "üzüntü": 1104,
+        "öfke": 1428,
+        "korku": 764,
+        "şaşkınlık": 647,
+        "tiksinti": 543,
+        "sevgi": 300,
+        "nötr": 1895
+      },
+      "kaynak_sinif": {
+        "goemotions_tr": {
+          "nötr": 1895,
+          "mutluluk": 1366,
+          "öfke": 649,
+          "üzüntü": 303,
+          "sevgi": 300,
+          "şaşkınlık": 103,
+          "korku": 83,
+          "tiksinti": 74
+        },
+        "tremo/consensus": {
+          "mutluluk": 590,
+          "üzüntü": 506,
+          "öfke": 463,
+          "korku": 443,
+          "tiksinti": 356,
+          "şaşkınlık": 274
+        },
+        "tremo/majority": {
+          "öfke": 199,
+          "üzüntü": 178,
+          "şaşkınlık": 155,
+          "korku": 121,
+          "tiksinti": 113,
+          "mutluluk": 112
+        },
+        "tweet_emotion": {
+          "mutluluk": 118,
+          "öfke": 117,
+          "korku": 117,
+          "üzüntü": 117,
+          "şaşkınlık": 115
+        }
+      }
+    },
+    "test": {
+      "toplam": 8875,
+      "sinif": {
+        "mutluluk": 2191,
+        "üzüntü": 1101,
+        "öfke": 1422,
+        "korku": 762,
+        "şaşkınlık": 654,
+        "tiksinti": 551,
+        "sevgi": 299,
+        "nötr": 1895
+      },
+      "kaynak_sinif": {
+        "goemotions_tr": {
+          "nötr": 1895,
+          "mutluluk": 1369,
+          "öfke": 647,
+          "üzüntü": 304,
+          "sevgi": 299,
+          "şaşkınlık": 104,
+          "korku": 82,
+          "tiksinti": 75
+        },
+        "tremo/consensus": {
+          "mutluluk": 604,
+          "üzüntü": 493,
+          "öfke": 468,
+          "korku": 437,
+          "tiksinti": 376,
+          "şaşkınlık": 282
+        },
+        "tremo/majority": {
+          "öfke": 190,
+          "üzüntü": 187,
+          "şaşkınlık": 152,
+          "korku": 127,
+          "tiksinti": 100,
+          "mutluluk": 99
+        },
+        "tweet_emotion": {
+          "mutluluk": 119,
+          "öfke": 117,
+          "üzüntü": 117,
+          "korku": 116,
+          "şaşkınlık": 116
+        }
+      }
+    },
+    "train_weak": {
+      "toplam": 105211,
+      "sinif": {
+        "mutluluk": 95697,
+        "üzüntü": 4347,
+        "öfke": 1248,
+        "korku": 80,
+        "şaşkınlık": 1740,
+        "tiksinti": 1140,
+        "sevgi": 959,
+        "nötr": 0
+      },
+      "kaynak_sinif": {
+        "mteb_movie": {
+          "mutluluk": 1713,
+          "üzüntü": 432,
+          "öfke": 125,
+          "şaşkınlık": 122,
+          "tiksinti": 111,
+          "sevgi": 50
+        },
+        "mteb_product": {
+          "mutluluk": 1005,
+          "üzüntü": 206,
+          "şaşkınlık": 41,
+          "korku": 15,
+          "öfke": 14,
+          "sevgi": 10,
+          "tiksinti": 10
+        },
+        "winvoker/HUMIR": {
+          "mutluluk": 11282,
+          "üzüntü": 2447,
+          "öfke": 878,
+          "tiksinti": 786,
+          "şaşkınlık": 628,
+          "sevgi": 231
+        },
+        "winvoker/magaza_yorumlari": {
+          "mutluluk": 1565,
+          "üzüntü": 307,
+          "öfke": 70,
+          "şaşkınlık": 28,
+          "tiksinti": 26,
+          "sevgi": 22,
+          "korku": 12
+        },
+        "winvoker/tweet-pn": {
+          "mutluluk": 280,
+          "öfke": 121,
+          "üzüntü": 48,
+          "tiksinti": 43,
+          "sevgi": 42,
+          "şaşkınlık": 9,
+          "korku": 3
+        },
+        "winvoker/urun_yorumlari": {
+          "mutluluk": 79852,
+          "şaşkınlık": 912,
+          "üzüntü": 907,
+          "sevgi": 604,
+          "tiksinti": 164,
+          "korku": 50,
+          "öfke": 40
+        }
+      }
+    },
+    "train_silver": {
+      "toplam": 27882,
+      "sinif": {
+        "mutluluk": 4226,
+        "üzüntü": 4302,
+        "öfke": 5293,
+        "korku": 5226,
+        "şaşkınlık": 4087,
+        "tiksinti": 4748,
+        "sevgi": 0,
+        "nötr": 0
+      },
+      "kaynak_sinif": {
+        "nihal_8class": {
+          "öfke": 5293,
+          "korku": 5226,
+          "tiksinti": 4748,
+          "üzüntü": 4302,
+          "mutluluk": 4226,
+          "şaşkınlık": 4087
+        }
+      }
+    }
+  },
+  "kural_isabeti": {
+    "aciklama": "Kurallar altin veriye uygulandi; isabet = kuralin verdigi etiketin altin etiketle uyusma orani.",
+    "etiketlenen_oran": 0.29,
+    "genel_isabet": 0.923,
+    "sinif_bazli": {
+      "mutluluk": {
+        "tahmin_sayisi": 6192,
+        "isabet": 0.954,
+        "kapsama": 0.429
+      },
+      "üzüntü": {
+        "tahmin_sayisi": 2055,
+        "isabet": 0.902,
+        "kapsama": 0.26
+      },
+      "öfke": {
+        "tahmin_sayisi": 2184,
+        "isabet": 0.95,
+        "kapsama": 0.235
+      },
+      "korku": {
+        "tahmin_sayisi": 2047,
+        "isabet": 0.95,
+        "kapsama": 0.388
+      },
+      "şaşkınlık": {
+        "tahmin_sayisi": 2080,
+        "isabet": 0.842,
+        "kapsama": 0.414
+      },
+      "tiksinti": {
+        "tahmin_sayisi": 1733,
+        "isabet": 0.947,
+        "kapsama": 0.458
+      },
+      "sevgi": {
+        "tahmin_sayisi": 894,
+        "isabet": 0.767,
+        "kapsama": 0.373
+      },
+      "nötr": {
+        "tahmin_sayisi": 0,
+        "isabet": null,
+        "kapsama": 0.046
+      }
+    },
+    "karisiklik": {
+      "nötr->mutluluk": 201,
+      "mutluluk->şaşkınlık": 190,
+      "mutluluk->sevgi": 176,
+      "nötr->üzüntü": 129,
+      "nötr->öfke": 86,
+      "sevgi->mutluluk": 57,
+      "nötr->korku": 52,
+      "öfke->üzüntü": 47,
+      "nötr->şaşkınlık": 47,
+      "öfke->şaşkınlık": 47,
+      "nötr->tiksinti": 42,
+      "öfke->tiksinti": 37,
+      "nötr->sevgi": 29,
+      "şaşkınlık->mutluluk": 27,
+      "üzüntü->şaşkınlık": 26
+    }
+  },
+  "sure_sn": 72.5
+}
