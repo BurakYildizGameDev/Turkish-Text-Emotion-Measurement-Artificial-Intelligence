@@ -1,4 +1,3 @@
-# Commit 147: exp(validation): execute 4-fold cross-validation and save fold metrics
 """
 EXP1 — 3-Fold Stratified Cross-Validation
 ==========================================

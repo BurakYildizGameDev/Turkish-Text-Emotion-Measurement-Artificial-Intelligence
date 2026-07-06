@@ -1,4 +1,3 @@
-# Commit 40: feat(data): add CLI threshold tuning to run_duplicate_analysis
 """
 Exact duplicate (MD5) + Near-duplicate (MinHash/LSH) analizi.
 GPU işlemi yok, eğitim yok — sadece veri kalite kontrolü.

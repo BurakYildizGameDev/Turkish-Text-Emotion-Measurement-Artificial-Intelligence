@@ -1,4 +1,3 @@
-# Commit 119: feat(training): save best model checkpoint for exp2 crosslingual run
 """
 Experiment 2 — BERTurk + Cross-Lingual Enhanced
 =================================================
