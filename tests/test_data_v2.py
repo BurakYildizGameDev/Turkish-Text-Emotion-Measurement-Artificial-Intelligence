@@ -1,4 +1,3 @@
-# Commit 203: test(v2): add tests for Turkish case folding and deduplication key generation
 """v2 veri hattı testleri: python -m pytest tests/"""
 
 import pytest
