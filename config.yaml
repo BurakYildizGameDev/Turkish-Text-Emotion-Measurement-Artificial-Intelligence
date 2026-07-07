@@ -1,3 +1,45 @@
-experiments:
-  exp2:
-    cl_multiplier: 1.0
+# ============================================================
+# Proje Konfigürasyonu
+# ============================================================
+
+project:
+  name: "turkish-emotion-berturk"
+  version: "1.0.0"
+
+# 8-Sınıflı Türkçe Duygu Analizi (v2 — gurur ve utanç çıkarıldı)
+# Tek kaynak src/data/labels.py'dir; bu blok onunla aynı tutulmalıdır (tests/ kontrol eder).
+emotions:
+  labels: ["mutluluk", "üzüntü", "öfke", "korku", "şaşkınlık", "tiksinti", "sevgi", "nötr"]
+  num_labels: 8
+  id2label:
+    0: "mutluluk"
+    1: "üzüntü"
+    2: "öfke"
+    3: "korku"
+    4: "şaşkınlık"
+    5: "tiksinti"
+    6: "sevgi"
+    7: "nötr"
+  label2id:
+    "mutluluk":  0
+    "üzüntü":    1
+    "öfke":      2
+    "korku":     3
+    "şaşkınlık": 4
+    "tiksinti":  5
+    "sevgi":     6
+    "nötr":      7
+
+# Demo / çıkarım: src.inference.emotion_classifier bu klasörü yükler.
+# Klasörde temperature.json varsa olasılıklar kalibre edilir.
+inference:
+  model_dir: "models/v2/gold_none_s42"   # ablation: val F1 ile seçildi (results/v2/ablation_summary.md)
+
+# Model
+model:
+  base_model: "dbmdz/bert-base-turkish-cased"
+  max_length: 128
+  dropout: 0.1
+
+# Eğitim hiperparametreleri: src/training/train_v2.py argümanları (bkz. README.md).
+# v1 eğitim/veri blokları legacy/ ile birlikte kaldırıldı.
