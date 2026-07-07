@@ -1,0 +1,585 @@
+[
+  {
+    "model": "Random Baseline (stratified)",
+    "model_label": "Random",
+    "type": "random baseline",
+    "test_samples": 5000,
+    "accuracy": 0.3944,
+    "f1_macro": 0.0965,
+    "f1_weighted": 0.3945,
+    "per_class": {
+      "mutluluk": {
+        "precision": 0.5108,
+        "recall": 0.5116,
+        "f1": 0.5112,
+        "support": 2537
+      },
+      "üzüntü": {
+        "precision": 0.0978,
+        "recall": 0.0979,
+        "f1": 0.0979,
+        "support": 582
+      },
+      "öfke": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 53
+      },
+      "korku": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "şaşkınlık": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 33
+      },
+      "tiksinti": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      },
+      "sevgi": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 45
+      },
+      "nötr": {
+        "precision": 0.3571,
+        "recall": 0.3552,
+        "f1": 0.3561,
+        "support": 1737
+      },
+      "utanç": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "gurur": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    }
+  },
+  {
+    "model": "Majority Baseline (mutluluk)",
+    "model_label": "Majority",
+    "type": "majority baseline",
+    "majority_class": "mutluluk",
+    "test_samples": 5000,
+    "accuracy": 0.5074,
+    "f1_macro": 0.0673,
+    "f1_weighted": 0.3416
+  },
+  {
+    "model": "BiLSTM (BERTurk tokenizer)",
+    "model_label": "BiLSTM",
+    "type": "untrained random baseline",
+    "architecture": "BiLSTM (embed=128, hidden=128, layers=2, bidirectional)",
+    "total_params": 4758026,
+    "test_samples": 5000,
+    "accuracy": 0.4862,
+    "f1_macro": 0.0696,
+    "f1_weighted": 0.3425,
+    "per_class": {
+      "mutluluk": {
+        "precision": 0.5076,
+        "recall": 0.9515,
+        "f1": 0.662,
+        "support": 2537
+      },
+      "üzüntü": {
+        "precision": 0.1944,
+        "recall": 0.012,
+        "f1": 0.0227,
+        "support": 582
+      },
+      "öfke": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 53
+      },
+      "korku": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "şaşkınlık": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 33
+      },
+      "tiksinti": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      },
+      "sevgi": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 45
+      },
+      "nötr": {
+        "precision": 0.4762,
+        "recall": 0.0058,
+        "f1": 0.0114,
+        "support": 1737
+      },
+      "utanç": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "gurur": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    },
+    "inference_time_sec": 2.0
+  },
+  {
+    "model": "bert-base-multilingual-cased",
+    "model_label": "mBERT",
+    "type": "zero-shot (random classification head)",
+    "test_samples": 5000,
+    "accuracy": 0.3346,
+    "f1_macro": 0.0613,
+    "f1_weighted": 0.1853,
+    "per_class": {
+      "mutluluk": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2537
+      },
+      "üzüntü": {
+        "precision": 0.375,
+        "recall": 0.0464,
+        "f1": 0.0826,
+        "support": 582
+      },
+      "öfke": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 53
+      },
+      "korku": {
+        "precision": 0.0129,
+        "recall": 0.3333,
+        "f1": 0.0248,
+        "support": 6
+      },
+      "şaşkınlık": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 33
+      },
+      "tiksinti": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      },
+      "sevgi": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 45
+      },
+      "nötr": {
+        "precision": 0.3451,
+        "recall": 0.9465,
+        "f1": 0.5058,
+        "support": 1737
+      },
+      "utanç": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "gurur": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    },
+    "inference_time_sec": 17.26
+  },
+  {
+    "model": "xlm-roberta-base",
+    "model_label": "XLM-RoBERTa",
+    "type": "zero-shot (random classification head)",
+    "test_samples": 5000,
+    "accuracy": 0.0066,
+    "f1_macro": 0.0013,
+    "f1_weighted": 0.0001,
+    "per_class": {
+      "mutluluk": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2537
+      },
+      "üzüntü": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 582
+      },
+      "öfke": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 53
+      },
+      "korku": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "şaşkınlık": {
+        "precision": 0.0066,
+        "recall": 1.0,
+        "f1": 0.0132,
+        "support": 33
+      },
+      "tiksinti": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      },
+      "sevgi": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 45
+      },
+      "nötr": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1737
+      },
+      "utanç": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "gurur": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    },
+    "inference_time_sec": 125.8
+  },
+  {
+    "model": "dbmdz/bert-base-turkish-cased",
+    "model_label": "BERTurk (EXP1)",
+    "type": "fine-tuned",
+    "test_samples": 82532,
+    "accuracy": 0.8081834924635293,
+    "f1_macro": 0.361738928146423,
+    "f1_weighted": 0.8459586742800281,
+    "per_class": {
+      "mutluluk": {
+        "precision": 0.962,
+        "recall": 0.814,
+        "f1": 0.8818,
+        "support": 41960
+      },
+      "üzüntü": {
+        "precision": 0.6172,
+        "recall": 0.7277,
+        "f1": 0.6679,
+        "support": 9947
+      },
+      "öfke": {
+        "precision": 0.1313,
+        "recall": 0.3753,
+        "f1": 0.1946,
+        "support": 802
+      },
+      "korku": {
+        "precision": 0.0804,
+        "recall": 0.7263,
+        "f1": 0.1448,
+        "support": 95
+      },
+      "şaşkınlık": {
+        "precision": 0.1838,
+        "recall": 0.7045,
+        "f1": 0.2915,
+        "support": 660
+      },
+      "tiksinti": {
+        "precision": 0.046,
+        "recall": 0.7241,
+        "f1": 0.0865,
+        "support": 87
+      },
+      "sevgi": {
+        "precision": 0.173,
+        "recall": 0.8194,
+        "f1": 0.2856,
+        "support": 753
+      },
+      "nötr": {
+        "precision": 0.9829,
+        "recall": 0.8433,
+        "f1": 0.9078,
+        "support": 28183
+      },
+      "utanç": {
+        "precision": 0.0531,
+        "recall": 0.5405,
+        "f1": 0.0966,
+        "support": 37
+      },
+      "gurur": {
+        "precision": 0.032,
+        "recall": 0.5,
+        "f1": 0.0602,
+        "support": 8
+      }
+    }
+  },
+  {
+    "model": "dbmdz/bert-base-turkish-cased",
+    "model_label": "BERTurk (EXP2)",
+    "type": "fine-tuned",
+    "test_samples": 82532,
+    "accuracy": 0.8743,
+    "f1_macro": 0.4629,
+    "f1_weighted": 0.8936,
+    "per_class": {
+      "mutluluk": {
+        "precision": 0.9692,
+        "recall": 0.8645,
+        "f1": 0.9138,
+        "support": 41960
+      },
+      "üzüntü": {
+        "precision": 0.7259,
+        "recall": 0.8225,
+        "f1": 0.7712,
+        "support": 9947
+      },
+      "öfke": {
+        "precision": 0.2225,
+        "recall": 0.6347,
+        "f1": 0.3294,
+        "support": 802
+      },
+      "korku": {
+        "precision": 0.2226,
+        "recall": 0.6842,
+        "f1": 0.3359,
+        "support": 95
+      },
+      "şaşkınlık": {
+        "precision": 0.2531,
+        "recall": 0.7439,
+        "f1": 0.3777,
+        "support": 660
+      },
+      "tiksinti": {
+        "precision": 0.141,
+        "recall": 0.4943,
+        "f1": 0.2194,
+        "support": 87
+      },
+      "sevgi": {
+        "precision": 0.253,
+        "recall": 0.8818,
+        "f1": 0.3931,
+        "support": 753
+      },
+      "nötr": {
+        "precision": 0.9899,
+        "recall": 0.9193,
+        "f1": 0.9533,
+        "support": 28183
+      },
+      "utanç": {
+        "precision": 0.1065,
+        "recall": 0.4865,
+        "f1": 0.1748,
+        "support": 37
+      },
+      "gurur": {
+        "precision": 0.0952,
+        "recall": 0.5,
+        "f1": 0.16,
+        "support": 8
+      }
+    }
+  },
+  {
+    "model": "dbmdz/bert-base-turkish-cased + NRC Turkish Lexicon",
+    "model_label": "BERTurk (EXP3)",
+    "type": "fine-tuned",
+    "test_samples": 82532,
+    "accuracy": 0.8151,
+    "f1_macro": 0.4376,
+    "f1_weighted": 0.8432,
+    "per_class": {
+      "mutluluk": {
+        "precision": 0.9838,
+        "recall": 0.7451,
+        "f1": 0.848,
+        "support": 41960
+      },
+      "üzüntü": {
+        "precision": 0.5335,
+        "recall": 0.8826,
+        "f1": 0.6651,
+        "support": 9947
+      },
+      "öfke": {
+        "precision": 0.1968,
+        "recall": 0.7282,
+        "f1": 0.3099,
+        "support": 802
+      },
+      "korku": {
+        "precision": 0.2374,
+        "recall": 0.6421,
+        "f1": 0.3466,
+        "support": 95
+      },
+      "şaşkınlık": {
+        "precision": 0.213,
+        "recall": 0.7924,
+        "f1": 0.3358,
+        "support": 660
+      },
+      "tiksinti": {
+        "precision": 0.1667,
+        "recall": 0.2759,
+        "f1": 0.2078,
+        "support": 87
+      },
+      "sevgi": {
+        "precision": 0.2366,
+        "recall": 0.8659,
+        "f1": 0.3716,
+        "support": 753
+      },
+      "nötr": {
+        "precision": 0.9909,
+        "recall": 0.9002,
+        "f1": 0.9434,
+        "support": 28183
+      },
+      "utanç": {
+        "precision": 0.1429,
+        "recall": 0.3243,
+        "f1": 0.1983,
+        "support": 37
+      },
+      "gurur": {
+        "precision": 0.0938,
+        "recall": 0.375,
+        "f1": 0.15,
+        "support": 8
+      }
+    }
+  },
+  {
+    "model": "dbmdz/bert-base-turkish-cased + NRC Lexicon + Cross-Lingual Data",
+    "model_label": "BERTurk (EXP4)",
+    "type": "fine-tuned",
+    "test_samples": 82532,
+    "accuracy": 0.8761,
+    "f1_macro": 0.4597,
+    "f1_weighted": 0.8956,
+    "per_class": {
+      "mutluluk": {
+        "precision": 0.9697,
+        "recall": 0.867,
+        "f1": 0.9155,
+        "support": 41960
+      },
+      "üzüntü": {
+        "precision": 0.7379,
+        "recall": 0.82,
+        "f1": 0.7768,
+        "support": 9947
+      },
+      "öfke": {
+        "precision": 0.2131,
+        "recall": 0.6434,
+        "f1": 0.3202,
+        "support": 802
+      },
+      "korku": {
+        "precision": 0.2032,
+        "recall": 0.6737,
+        "f1": 0.3122,
+        "support": 95
+      },
+      "şaşkınlık": {
+        "precision": 0.263,
+        "recall": 0.7364,
+        "f1": 0.3876,
+        "support": 660
+      },
+      "tiksinti": {
+        "precision": 0.1327,
+        "recall": 0.4713,
+        "f1": 0.2071,
+        "support": 87
+      },
+      "sevgi": {
+        "precision": 0.2535,
+        "recall": 0.8884,
+        "f1": 0.3945,
+        "support": 753
+      },
+      "nötr": {
+        "precision": 0.9908,
+        "recall": 0.9215,
+        "f1": 0.9549,
+        "support": 28183
+      },
+      "utanç": {
+        "precision": 0.1458,
+        "recall": 0.5676,
+        "f1": 0.232,
+        "support": 37
+      },
+      "gurur": {
+        "precision": 0.0533,
+        "recall": 0.5,
+        "f1": 0.0964,
+        "support": 8
+      }
+    }
+  }
+]

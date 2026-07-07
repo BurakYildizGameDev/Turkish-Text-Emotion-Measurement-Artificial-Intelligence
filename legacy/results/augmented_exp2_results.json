@@ -1,0 +1,165 @@
+{
+  "_uyari": "UYARI: Bu sonuc model iyilesmesi DEGILDIR. Model ayni; test setine 200 sentetik cumle (100 gurur + 100 utanc) eklenmistir. Bu cumleler sablonla uretilmistir (315/1000 'Acikcasi,' ile baslar) ve cogu etiket kelimesini icerir (utanc %88 'utan', gurur %79 'gurur'). Gurur/utanc F1 artisi test setinin kolaylasmasindan kaynaklanir; orijinal test seti sonucu raporlanmalidir.",
+  "experiment": "exp2_augmented_eval",
+  "model": "results/exp2/best_model",
+  "data": "data/splits/test_augmented.parquet",
+  "total_samples": 82732,
+  "device": "cuda",
+  "test_accuracy": 0.8747,
+  "test_f1_macro": 0.566,
+  "test_f1_weighted": 0.8935,
+  "per_class": {
+    "mutluluk": {
+      "precision": 0.9693,
+      "recall": 0.865,
+      "f1": 0.9142,
+      "support": 41960
+    },
+    "üzüntü": {
+      "precision": 0.7269,
+      "recall": 0.8249,
+      "f1": 0.7728,
+      "support": 9947
+    },
+    "öfke": {
+      "precision": 0.2223,
+      "recall": 0.6334,
+      "f1": 0.3291,
+      "support": 802
+    },
+    "korku": {
+      "precision": 0.2249,
+      "recall": 0.6842,
+      "f1": 0.3385,
+      "support": 95
+    },
+    "şaşkınlık": {
+      "precision": 0.2527,
+      "recall": 0.7439,
+      "f1": 0.3773,
+      "support": 660
+    },
+    "tiksinti": {
+      "precision": 0.1401,
+      "recall": 0.4943,
+      "f1": 0.2183,
+      "support": 87
+    },
+    "sevgi": {
+      "precision": 0.2522,
+      "recall": 0.8818,
+      "f1": 0.3922,
+      "support": 753
+    },
+    "nötr": {
+      "precision": 0.9901,
+      "recall": 0.9184,
+      "f1": 0.9529,
+      "support": 28183
+    },
+    "utanç": {
+      "precision": 0.4387,
+      "recall": 0.8613,
+      "f1": 0.5813,
+      "support": 137
+    },
+    "gurur": {
+      "precision": 0.7121,
+      "recall": 0.8704,
+      "f1": 0.7833,
+      "support": 108
+    }
+  },
+  "source_support": {
+    "fthbrmnby": {
+      "gurur": 0,
+      "korku": 0,
+      "mutluluk": 10,
+      "nötr": 0,
+      "sevgi": 0,
+      "tiksinti": 0,
+      "utanç": 0,
+      "öfke": 0,
+      "üzüntü": 2,
+      "şaşkınlık": 0
+    },
+    "goemotions_tr": {
+      "gurur": 8,
+      "korku": 95,
+      "mutluluk": 1764,
+      "nötr": 1872,
+      "sevgi": 753,
+      "tiksinti": 87,
+      "utanç": 37,
+      "öfke": 802,
+      "üzüntü": 352,
+      "şaşkınlık": 660
+    },
+    "manual_collection": {
+      "gurur": 100,
+      "korku": 0,
+      "mutluluk": 0,
+      "nötr": 0,
+      "sevgi": 0,
+      "tiksinti": 0,
+      "utanç": 100,
+      "öfke": 0,
+      "üzüntü": 0,
+      "şaşkınlık": 0
+    },
+    "mteb_movie": {
+      "gurur": 0,
+      "korku": 0,
+      "mutluluk": 790,
+      "nötr": 0,
+      "sevgi": 0,
+      "tiksinti": 0,
+      "utanç": 0,
+      "öfke": 0,
+      "üzüntü": 817,
+      "şaşkınlık": 0
+    },
+    "mteb_product": {
+      "gurur": 0,
+      "korku": 0,
+      "mutluluk": 372,
+      "nötr": 0,
+      "sevgi": 0,
+      "tiksinti": 0,
+      "utanç": 0,
+      "öfke": 0,
+      "üzüntü": 397,
+      "şaşkınlık": 0
+    },
+    "ttc4900": {
+      "gurur": 0,
+      "korku": 0,
+      "mutluluk": 0,
+      "nötr": 701,
+      "sevgi": 0,
+      "tiksinti": 0,
+      "utanç": 0,
+      "öfke": 0,
+      "üzüntü": 0,
+      "şaşkınlık": 0
+    },
+    "winvoker": {
+      "gurur": 0,
+      "korku": 0,
+      "mutluluk": 39024,
+      "nötr": 25610,
+      "sevgi": 0,
+      "tiksinti": 0,
+      "utanç": 0,
+      "öfke": 0,
+      "üzüntü": 8379,
+      "şaşkınlık": 0
+    }
+  },
+  "highlighted": {
+    "gurur_f1": 0.7833,
+    "utanc_f1": 0.5813,
+    "gurur_support": 108,
+    "utanc_support": 137
+  }
+}

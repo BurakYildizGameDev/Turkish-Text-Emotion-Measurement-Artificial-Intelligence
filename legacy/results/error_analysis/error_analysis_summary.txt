@@ -1,0 +1,172 @@
+======================================================================
+  TÜRKÇE DUYGU ANALİZİ — HATA ANALİZİ RAPORU
+======================================================================
+
+  Toplam Test Örneği   : 82,532
+  Doğru Tahmin         : 72,307  (87.61%)
+  Yanlış Tahmin        : 10,225  (12.39%)
+  F1-Macro             : 0.4597
+  F1-Weighted          : 0.8956
+  Yüksek Güvenli Hata  : 6,238  (>70% emin ama yanlış)
+
+----------------------------------------------------------------------
+  VERİ ASIMETRIS UYARISI (test setinde az örnek):
+----------------------------------------------------------------------
+  mutluluk      41,960 örnek
+  üzüntü         9,947 örnek
+  öfke             802 örnek
+  korku             95 örnek
+  şaşkınlık        660 örnek
+  tiksinti          87 örnek
+  sevgi            753 örnek
+  nötr          28,183 örnek
+  utanç             37 örnek
+  gurur              8 örnek ← GÜVENİLMEZ SONUÇLAR
+
+----------------------------------------------------------------------
+  SINIF BAZLI METRİKLER:
+----------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+    mutluluk       0.97      0.87      0.92     41960
+      üzüntü       0.74      0.82      0.78      9947
+        öfke       0.21      0.64      0.32       802
+       korku       0.20      0.67      0.31        95
+   şaşkınlık       0.26      0.74      0.39       660
+    tiksinti       0.13      0.47      0.21        87
+       sevgi       0.25      0.89      0.39       753
+        nötr       0.99      0.92      0.95     28183
+       utanç       0.15      0.57      0.23        37
+       gurur       0.05      0.50      0.10         8
+
+    accuracy                           0.88     82532
+   macro avg       0.40      0.71      0.46     82532
+weighted avg       0.93      0.88      0.90     82532
+
+----------------------------------------------------------------------
+  TOP-10 KARIŞMA ÇİFTLERİ:
+----------------------------------------------------------------------
+
+  1. mutluluk     → üzüntü        (2,850 hata,  6.8% hata oranı)
+     Ort. Güven       : 0.760
+     Yük. Güv. Hata   : 1,812
+     Ort. Metin Uzun. : 27 kelime
+     Güvenilirlik     : Yeterli örnek
+     Ortak Kelimeler  : film, iyi, filmi, ürün, biraz, güzel
+     Hipotez: 'mutluluk' → 'üzüntü' çifti için önceden
+              tanımlanmış hipotez yok. Ortak kelimeler ve
+              NRC örtüşmesi incelenmeli.
+
+  2. mutluluk     → sevgi         (1,271 hata,  3.0% hata oranı)
+     Ort. Güven       : 0.788
+     Yük. Güv. Hata   : 868
+     Ort. Metin Uzun. : 10 kelime
+     Güvenilirlik     : Yeterli örnek
+     Ortak Kelimeler  : iyi, güzel, harika, teşekkürler, bunu, name
+     Hipotez: Her ikisi de 'joy' ve 'positive' NRC
+              kanallarını paylaşır; olumlu bağlamda ifade
+              edilen sevgi cümleleri mutluluk gibi görünür.
+
+  3. üzüntü       → mutluluk      (1,074 hata,  10.8% hata oranı)
+     Ort. Güven       : 0.795
+     Yük. Güv. Hata   : 777
+     Ort. Metin Uzun. : 28 kelime
+     Güvenilirlik     : Yeterli örnek
+     Ortak Kelimeler  : iyi, güzel, ürün, film, olarak, aldım
+     Hipotez: 'üzüntü' → 'mutluluk' çifti için önceden
+              tanımlanmış hipotez yok. Ortak kelimeler ve
+              NRC örtüşmesi incelenmeli.
+
+  4. nötr         → öfke          (814 hata,  2.9% hata oranı)
+     Ort. Güven       : 0.726
+     Yük. Güv. Hata   : 459
+     Ort. Metin Uzun. : 10 kelime
+     Güvenilirlik     : Yeterli örnek
+     Ortak Kelimeler  : name, sadece, şey, olarak, bunun, bunu
+     Hipotez: 'nötr' → 'öfke' çifti için önceden tanımlanmış
+              hipotez yok. Ortak kelimeler ve NRC örtüşmesi
+              incelenmeli.
+
+  5. nötr         → şaşkınlık     (607 hata,  2.1% hata oranı)
+     Ort. Güven       : 0.744
+     Yük. Güv. Hata   : 369
+     Ort. Metin Uzun. : 10 kelime
+     Güvenilirlik     : Yeterli örnek
+     Ortak Kelimeler  : name, olduğunu, bunu, olarak, şey, sadece
+     Hipotez: 'nötr' → 'şaşkınlık' çifti için önceden
+              tanımlanmış hipotez yok. Ortak kelimeler ve
+              NRC örtüşmesi incelenmeli.
+
+  6. mutluluk     → öfke          (573 hata,  1.4% hata oranı)
+     Ort. Güven       : 0.668
+     Yük. Güv. Hata   : 263
+     Ort. Metin Uzun. : 11 kelime
+     Güvenilirlik     : Yeterli örnek
+     Ortak Kelimeler  : lol, sadece, iyi, bunu, olarak, evet
+     Hipotez: 'mutluluk' → 'öfke' çifti için önceden
+              tanımlanmış hipotez yok. Ortak kelimeler ve
+              NRC örtüşmesi incelenmeli.
+
+  7. mutluluk     → şaşkınlık     (530 hata,  1.3% hata oranı)
+     Ort. Güven       : 0.714
+     Yük. Güv. Hata   : 294
+     Ort. Metin Uzun. : 11 kelime
+     Güvenilirlik     : Yeterli örnek
+     Ortak Kelimeler  : lol, evet, olduğunu, iyi, bunu, vay
+     Hipotez: Olumlu sürpriz ifadeleri ('harika',
+              'inanılmaz') mutluluk sınıfında çok daha fazla
+              örnekle temsil edilir.
+
+  8. nötr         → sevgi         (485 hata,  1.7% hata oranı)
+     Ort. Güven       : 0.721
+     Yük. Güv. Hata   : 269
+     Ort. Metin Uzun. : 9 kelime
+     Güvenilirlik     : Yeterli örnek
+     Ortak Kelimeler  : name, iyi, sadece, benim, evet, ona
+     Hipotez: 'nötr' → 'sevgi' çifti için önceden
+              tanımlanmış hipotez yok. Ortak kelimeler ve
+              NRC örtüşmesi incelenmeli.
+
+  9. üzüntü       → öfke          (350 hata,  3.5% hata oranı)
+     Ort. Güven       : 0.682
+     Yük. Güv. Hata   : 169
+     Ort. Metin Uzun. : 9 kelime
+     Güvenilirlik     : Yeterli örnek
+     Ortak Kelimeler  : beni, hayır, senin, sadece, seni, üzgünüm
+     Hipotez: 'üzüntü' → 'öfke' çifti için önceden
+              tanımlanmış hipotez yok. Ortak kelimeler ve
+              NRC örtüşmesi incelenmeli.
+
+  10. mutluluk     → nötr          (198 hata,  0.5% hata oranı)
+     Ort. Güven       : 0.676
+     Yük. Güv. Hata   : 93
+     Ort. Metin Uzun. : 21 kelime
+     Güvenilirlik     : Yeterli örnek
+     Ortak Kelimeler  : the, film, filmi, nin, filmin, olarak
+     Hipotez: Nötr sınıf eğitim setinde aşırı temsil edilir.
+              Düşük duygusallıktaki mutluluk cümleleri nötr
+              gibi görünür.
+
+----------------------------------------------------------------------
+  EN TEHLİKELİ HATALAR (>70% güven, 6,237 örnek):
+----------------------------------------------------------------------
+
+  [korku → utanç]  güven=1.000
+  "Vay canına, bu utanç verici"
+
+  [nötr → gurur]  güven=1.000
+  "Böyle mükemmel bir oyuncu kadrosunun bir üyesi olduğum için gurur duyuyorum ."
+
+  [mutluluk → gurur]  güven=1.000
+  "Seninle çok gurur duyuyorum! Bunu harika bir şekilde hallettin!"
+
+  [mutluluk → gurur]  güven=1.000
+  "Bugün birkez daha gurur duyuyorum Fenerbahçe'li oldugum için"
+
+  [nötr → tiksinti]  güven=1.000
+  ".....ah.... iğrenç"
+
+======================================================================
+  ÇIKTI DOSYALARI:
+  results\error_analysis
+======================================================================

@@ -1,0 +1,82 @@
+{
+  "dataset_sizes": {
+    "train": 385146,
+    "val": 82532,
+    "test": 82532
+  },
+  "exact_duplicates": {
+    "train_test": 719,
+    "train_val": 704,
+    "val_test": 199
+  },
+  "near_duplicates": {
+    "train_test": 1757,
+    "train_val": 1786,
+    "val_test": 340
+  },
+  "threshold": 0.85,
+  "minhash_perms": 128,
+  "shingle_size": 3,
+  "sample_pairs_train_test": [
+    {
+      "query_idx": 223,
+      "index_key": "train_327775",
+      "query_text": "keşke söylemeseydi m",
+      "index_text": "keşke söylemeseydi m"
+    },
+    {
+      "query_idx": 491,
+      "index_key": "train_352520",
+      "query_text": "hızlı gönderi ve kaliteli ürün için teşekkürler",
+      "index_text": "hızlı gönderi ve kaliteli ürün için teşekkürler"
+    },
+    {
+      "query_idx": 491,
+      "index_key": "train_338435",
+      "query_text": "hızlı gönderi ve kaliteli ürün için teşekkürler",
+      "index_text": "hızlı gönderi ve kaliteli ürün için teşekkürler"
+    },
+    {
+      "query_idx": 508,
+      "index_key": "train_97098",
+      "query_text": "iyi çalışmalar",
+      "index_text": "iyi çalışmalar"
+    },
+    {
+      "query_idx": 564,
+      "index_key": "train_234415",
+      "query_text": "fi yatina göre çok i yi bi r ürün",
+      "index_text": "fi yatina göre çok i yi bi r ürün"
+    },
+    {
+      "query_idx": 733,
+      "index_key": "train_26084",
+      "query_text": "güzel",
+      "index_text": "güzel"
+    },
+    {
+      "query_idx": 768,
+      "index_key": "train_161368",
+      "query_text": "diger arkadaslarda belirtmisler gerci ama bir seri ancak bu kadar berbat edilebilir ne diyim yanii daha",
+      "index_text": "diger arkadaslarda belirtmisler gerci ama bir seri ancak bu kadar berbat edilebilir ne diyim yanii daha"
+    },
+    {
+      "query_idx": 840,
+      "index_key": "train_355716",
+      "query_text": "extra yumoşu yıllardır kulllanıyoruz gerçekten çok güzel yumaşatıp güzel koku bırakıyor",
+      "index_text": "yumoşu yıllardır kulllanıyoruz gerçekten çok güzel yumaşatıp güzel koku bırakıyor"
+    },
+    {
+      "query_idx": 866,
+      "index_key": "train_109039",
+      "query_text": "resmi internet sitesi",
+      "index_text": "resmi internet sitesi"
+    },
+    {
+      "query_idx": 866,
+      "index_key": "train_191251",
+      "query_text": "resmi internet sitesi",
+      "index_text": "resmi internet sitesi"
+    }
+  ]
+}
