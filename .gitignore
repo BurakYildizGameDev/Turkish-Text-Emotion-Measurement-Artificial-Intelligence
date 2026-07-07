@@ -1,5 +1,39 @@
+# Python
 __pycache__/
 *.py[cod]
+*.egg-info/
 .venv/
 venv/
+.ipynb_checkpoints/
+
+# Eğitim çıktıları (büyük ikili dosyalar — Git LFS veya HF Hub ile paylaşın)
+results/*/best_model/
+results/**/tmp_ckpt/
+models/checkpoints/
+/runs/
+wandb/
+
+# Önbellek / geçici
+.cache/
 *.log
+.env
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# TREMO (Tocoglu & Alpkocak, 2018) yalnızca ticari olmayan kullanım içindir; ham dosya ve
+# TREMO metinlerini içeren v2 split'leri dağıtılmaz. `python -m src.data.build_v2` ile yeniden üretilir.
+data/raw/tremo/
+data/v2/*.parquet
+
+# v2 eğitim çıktıları: model ağırlıkları büyük (her biri ~440 MB) — HF Hub / LFS ile paylaşılır
+models/v2/
+models/_tmp_ckpt/
+
+# v1 verisi (~400 MB; v2 hattı kullanmaz) — bkz. legacy/README.md
+data/processed/
+data/raw/combined_raw.parquet
+data/splits/
