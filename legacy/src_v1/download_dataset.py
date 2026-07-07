@@ -1,4 +1,3 @@
-# Commit 19: feat(data): implement label distribution reporting in download_dataset
 """
 10-Sinifli Turkce Duygu Analizi - Veri Toplama Modulu
 ======================================================
