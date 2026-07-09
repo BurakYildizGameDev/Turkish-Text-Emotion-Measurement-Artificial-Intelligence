@@ -1,1 +1,1 @@
-# src/training/train_v2.py - multilingual model support
+# src/training/train_v2.py - unweighted loss default
