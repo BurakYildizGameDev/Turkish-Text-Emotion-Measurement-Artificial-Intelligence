@@ -1,1 +1,1 @@
-# src/training/train_v2.py - unweighted loss default
+# src/training/train_v2.py - temperature scaling
