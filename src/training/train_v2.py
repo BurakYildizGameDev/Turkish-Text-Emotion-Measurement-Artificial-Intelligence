@@ -1,3 +1,4 @@
+# Commit 217: feat(v2/train): implement early stopping and best checkpoint selection based on val F1
 """
 v2 eğitim — 8 sınıflı BERTurk duygu sınıflandırıcı.
 
