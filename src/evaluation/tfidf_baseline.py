@@ -1,3 +1,4 @@
+# Commit 220: feat(v2/eval): train and evaluate TF-IDF baseline on v2 gold test set
 """
 Klasik baseline: TF-IDF (kelime 1-2 gram + karakter 2-5 gram) + Logistic Regression.
 
