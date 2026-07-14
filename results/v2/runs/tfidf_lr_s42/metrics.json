@@ -1,0 +1,200 @@
+{
+  "run": "tfidf_lr_s42",
+  "data": "gold",
+  "seed": 42,
+  "imbalance": "none",
+  "model": "TF-IDF (word 1-2 + char_wb 2-5) + LogisticRegression",
+  "model_key": "tfidf_lr",
+  "hparams": {
+    "C_grid": [
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "best_C": 2.0,
+    "val_f1_by_C": {
+      "0.5": 0.7552,
+      "1.0": 0.7639,
+      "2.0": 0.764,
+      "4.0": 0.7629,
+      "8.0": 0.7582
+    }
+  },
+  "train_size": 41465,
+  "best_epoch": null,
+  "val_f1_macro": 0.764,
+  "test": {
+    "f1_macro": 0.767,
+    "f1_weighted": 0.7749,
+    "accuracy": 0.7741,
+    "per_class": {
+      "mutluluk": {
+        "precision": 0.8319,
+        "recall": 0.8288,
+        "f1-score": 0.8304,
+        "support": 2191
+      },
+      "üzüntü": {
+        "precision": 0.8127,
+        "recall": 0.7648,
+        "f1-score": 0.788,
+        "support": 1101
+      },
+      "öfke": {
+        "precision": 0.7231,
+        "recall": 0.685,
+        "f1-score": 0.7035,
+        "support": 1422
+      },
+      "korku": {
+        "precision": 0.9109,
+        "recall": 0.8451,
+        "f1-score": 0.8768,
+        "support": 762
+      },
+      "şaşkınlık": {
+        "precision": 0.896,
+        "recall": 0.7905,
+        "f1-score": 0.84,
+        "support": 654
+      },
+      "tiksinti": {
+        "precision": 0.9181,
+        "recall": 0.7931,
+        "f1-score": 0.851,
+        "support": 551
+      },
+      "sevgi": {
+        "precision": 0.7232,
+        "recall": 0.4281,
+        "f1-score": 0.5378,
+        "support": 299
+      },
+      "nötr": {
+        "precision": 0.6374,
+        "recall": 0.7979,
+        "f1-score": 0.7087,
+        "support": 1895
+      }
+    },
+    "confusion_matrix": [
+      [
+        1816,
+        38,
+        39,
+        13,
+        32,
+        5,
+        28,
+        220
+      ],
+      [
+        67,
+        842,
+        63,
+        8,
+        12,
+        4,
+        0,
+        105
+      ],
+      [
+        59,
+        43,
+        974,
+        9,
+        7,
+        12,
+        4,
+        314
+      ],
+      [
+        20,
+        32,
+        24,
+        644,
+        0,
+        7,
+        2,
+        33
+      ],
+      [
+        36,
+        19,
+        20,
+        7,
+        517,
+        5,
+        1,
+        49
+      ],
+      [
+        8,
+        14,
+        42,
+        11,
+        1,
+        437,
+        1,
+        37
+      ],
+      [
+        41,
+        5,
+        20,
+        2,
+        1,
+        0,
+        128,
+        102
+      ],
+      [
+        136,
+        43,
+        165,
+        13,
+        7,
+        6,
+        13,
+        1512
+      ]
+    ],
+    "per_source": {
+      "goemotions_tr": {
+        "n": 4775,
+        "accuracy": 0.6821,
+        "f1_macro_own_classes": 0.5532
+      },
+      "tremo/consensus": {
+        "n": 2660,
+        "accuracy": 0.9195,
+        "f1_macro_own_classes": 0.925
+      },
+      "tremo/majority": {
+        "n": 855,
+        "accuracy": 0.7123,
+        "f1_macro_own_classes": 0.7275
+      },
+      "tweet_emotion": {
+        "n": 585,
+        "accuracy": 0.9538,
+        "f1_macro_own_classes": 0.9662
+      }
+    },
+    "ceviri_kisa_yolu": {
+      "aciklama": "TREMO/tweet (ana dil) örneklerinin nötr veya sevgi tahmin edilme oranı; gold'da bu kaynaklarda bu sınıflar yok.",
+      "orani": 0.018,
+      "notr": 63,
+      "sevgi": 11,
+      "native_n": 4100
+    }
+  },
+  "calibration": {
+    "temperature": 0.9172,
+    "test_ece_before": 0.0273,
+    "test_ece_after": 0.0201
+  },
+  "runtime_min": 1.64
+}
