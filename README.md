@@ -1,3 +1,4 @@
-# Türkçe Metin Duygu Analizi (v2)
+# Türkçe Metin Duygu Sınıflandırma (v2)
 
-8 Sınıflı Temiz Mimari Tasarımı
+## Çalıştırma Sırası
+python -m src.training.run_ablation_v2
