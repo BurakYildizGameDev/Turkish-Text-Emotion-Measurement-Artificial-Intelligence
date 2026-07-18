@@ -1,0 +1,245 @@
+{
+  "run": "gold_weak_s43",
+  "data": "gold_weak",
+  "seed": 43,
+  "imbalance": "weighted_loss",
+  "weak_cap": 5000,
+  "hparams": {
+    "max_length": 128,
+    "batch_size": 32,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "max_epochs": 4,
+    "early_stopping_patience": 2,
+    "weak_subset_seed": 42
+  },
+  "model": "dbmdz/bert-base-turkish-cased",
+  "train_size": 55979,
+  "train_class_counts": {
+    "mutluluk": 15256,
+    "üzüntü": 9500,
+    "öfke": 7902,
+    "korku": 3641,
+    "şaşkınlık": 4776,
+    "tiksinti": 3689,
+    "sevgi": 2362,
+    "nötr": 8853
+  },
+  "train_quality_counts": {
+    "gold": 41465,
+    "weak": 14514
+  },
+  "loss_weights": [
+    0.4587,
+    0.7366,
+    0.8855,
+    1.9218,
+    1.4651,
+    1.8968,
+    2.9625,
+    0.7904
+  ],
+  "global_steps": 7000,
+  "best_epoch": 4.0,
+  "val_history": [
+    {
+      "eval_loss": 0.6101,
+      "eval_f1_macro": 0.7929,
+      "eval_accuracy": 0.7925,
+      "epoch": 1.0
+    },
+    {
+      "eval_loss": 0.6033,
+      "eval_f1_macro": 0.8017,
+      "eval_accuracy": 0.8026,
+      "epoch": 2.0
+    },
+    {
+      "eval_loss": 0.6307,
+      "eval_f1_macro": 0.804,
+      "eval_accuracy": 0.8044,
+      "epoch": 3.0
+    },
+    {
+      "eval_loss": 0.6766,
+      "eval_f1_macro": 0.8066,
+      "eval_accuracy": 0.8085,
+      "epoch": 4.0
+    }
+  ],
+  "val_f1_macro": 0.8066,
+  "test": {
+    "f1_macro": 0.8044,
+    "f1_weighted": 0.8102,
+    "accuracy": 0.8094,
+    "per_class": {
+      "mutluluk": {
+        "precision": 0.8989,
+        "recall": 0.8439,
+        "f1-score": 0.8705,
+        "support": 2191
+      },
+      "üzüntü": {
+        "precision": 0.8448,
+        "recall": 0.8456,
+        "f1-score": 0.8452,
+        "support": 1101
+      },
+      "öfke": {
+        "precision": 0.7403,
+        "recall": 0.7658,
+        "f1-score": 0.7529,
+        "support": 1422
+      },
+      "korku": {
+        "precision": 0.8709,
+        "recall": 0.9029,
+        "f1-score": 0.8866,
+        "support": 762
+      },
+      "şaşkınlık": {
+        "precision": 0.827,
+        "recall": 0.8624,
+        "f1-score": 0.8443,
+        "support": 654
+      },
+      "tiksinti": {
+        "precision": 0.8473,
+        "recall": 0.8966,
+        "f1-score": 0.8713,
+        "support": 551
+      },
+      "sevgi": {
+        "precision": 0.5522,
+        "recall": 0.7425,
+        "f1-score": 0.6334,
+        "support": 299
+      },
+      "nötr": {
+        "precision": 0.7528,
+        "recall": 0.7103,
+        "f1-score": 0.7309,
+        "support": 1895
+      }
+    },
+    "confusion_matrix": [
+      [
+        1849,
+        18,
+        31,
+        4,
+        62,
+        7,
+        86,
+        134
+      ],
+      [
+        22,
+        931,
+        49,
+        32,
+        9,
+        10,
+        7,
+        41
+      ],
+      [
+        29,
+        43,
+        1089,
+        22,
+        16,
+        31,
+        13,
+        179
+      ],
+      [
+        8,
+        23,
+        16,
+        688,
+        1,
+        8,
+        7,
+        11
+      ],
+      [
+        20,
+        20,
+        13,
+        9,
+        564,
+        6,
+        1,
+        21
+      ],
+      [
+        2,
+        7,
+        24,
+        7,
+        1,
+        494,
+        2,
+        14
+      ],
+      [
+        21,
+        2,
+        8,
+        3,
+        0,
+        1,
+        222,
+        42
+      ],
+      [
+        106,
+        58,
+        241,
+        25,
+        29,
+        26,
+        64,
+        1346
+      ]
+    ],
+    "per_source": {
+      "goemotions_tr": {
+        "n": 4775,
+        "accuracy": 0.7087,
+        "f1_macro_own_classes": 0.6126
+      },
+      "tremo/consensus": {
+        "n": 2660,
+        "accuracy": 0.9564,
+        "f1_macro_own_classes": 0.956
+      },
+      "tremo/majority": {
+        "n": 855,
+        "accuracy": 0.807,
+        "f1_macro_own_classes": 0.8085
+      },
+      "tweet_emotion": {
+        "n": 585,
+        "accuracy": 0.9658,
+        "f1_macro_own_classes": 0.9724
+      }
+    },
+    "ceviri_kisa_yolu": {
+      "aciklama": "TREMO/tweet (ana dil) örneklerinin nötr veya sevgi tahmin edilme oranı; gold'da bu kaynaklarda bu sınıflar yok.",
+      "orani": 0.0039,
+      "notr": 5,
+      "sevgi": 11,
+      "native_n": 4100
+    }
+  },
+  "calibration": {
+    "temperature": 1.4851,
+    "test_ece_before": 0.0915,
+    "test_ece_after": 0.0219
+  },
+  "runtime_min": 8.28,
+  "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU"
+}
