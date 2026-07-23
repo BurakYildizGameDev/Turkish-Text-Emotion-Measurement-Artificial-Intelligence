@@ -1,0 +1,338 @@
+{
+  "referans": "gold_none",
+  "B": 10000,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "referans_test_f1": 0.8122,
+  "karsilastirmalar": {
+    "tfidf_lr": {
+      "n_seed": 1,
+      "f1_fark_ref_eksi_diger": 0.0452,
+      "ci95": [
+        0.0366,
+        0.0538
+      ],
+      "p_bootstrap": 0.0,
+      "mcnemar_seed_bazli": [
+        {
+          "yalniz_ref_dogru": 825,
+          "yalniz_diger_dogru": 456,
+          "p": 4.008973101658589e-25
+        }
+      ],
+      "p_holm": 0.0,
+      "anlamli_0.05": true
+    },
+    "gold": {
+      "n_seed": 3,
+      "f1_fark_ref_eksi_diger": 0.0075,
+      "ci95": [
+        0.0029,
+        0.0121
+      ],
+      "p_bootstrap": 0.0016,
+      "mcnemar_seed_bazli": [
+        {
+          "yalniz_ref_dogru": 325,
+          "yalniz_diger_dogru": 264,
+          "p": 0.01335905055931797
+        },
+        {
+          "yalniz_ref_dogru": 280,
+          "yalniz_diger_dogru": 206,
+          "p": 0.0009097285373075054
+        },
+        {
+          "yalniz_ref_dogru": 246,
+          "yalniz_diger_dogru": 181,
+          "p": 0.0019195013448729415
+        }
+      ],
+      "p_holm": 0.0064,
+      "anlamli_0.05": true
+    },
+    "gold_weak": {
+      "n_seed": 3,
+      "f1_fark_ref_eksi_diger": 0.0066,
+      "ci95": [
+        0.0018,
+        0.0112
+      ],
+      "p_bootstrap": 0.0062,
+      "mcnemar_seed_bazli": [
+        {
+          "yalniz_ref_dogru": 326,
+          "yalniz_diger_dogru": 282,
+          "p": 0.08109483557212817
+        },
+        {
+          "yalniz_ref_dogru": 319,
+          "yalniz_diger_dogru": 239,
+          "p": 0.000809691642019166
+        },
+        {
+          "yalniz_ref_dogru": 345,
+          "yalniz_diger_dogru": 266,
+          "p": 0.0015808354538352435
+        }
+      ],
+      "p_holm": 0.0186,
+      "anlamli_0.05": true
+    },
+    "gold_silver": {
+      "n_seed": 3,
+      "f1_fark_ref_eksi_diger": 0.0256,
+      "ci95": [
+        0.0196,
+        0.0312
+      ],
+      "p_bootstrap": 0.0,
+      "mcnemar_seed_bazli": [
+        {
+          "yalniz_ref_dogru": 542,
+          "yalniz_diger_dogru": 347,
+          "p": 6.48080087874767e-11
+        },
+        {
+          "yalniz_ref_dogru": 508,
+          "yalniz_diger_dogru": 321,
+          "p": 8.756775034267089e-11
+        },
+        {
+          "yalniz_ref_dogru": 538,
+          "yalniz_diger_dogru": 307,
+          "p": 1.697696703291817e-15
+        }
+      ],
+      "p_holm": 0.0,
+      "anlamli_0.05": true
+    },
+    "mbert_none": {
+      "n_seed": 3,
+      "f1_fark_ref_eksi_diger": 0.0326,
+      "ci95": [
+        0.0259,
+        0.0393
+      ],
+      "p_bootstrap": 0.0,
+      "mcnemar_seed_bazli": [
+        {
+          "yalniz_ref_dogru": 658,
+          "yalniz_diger_dogru": 395,
+          "p": 4.820853789844692e-16
+        },
+        {
+          "yalniz_ref_dogru": 681,
+          "yalniz_diger_dogru": 401,
+          "p": 1.4718377598436444e-17
+        },
+        {
+          "yalniz_ref_dogru": 668,
+          "yalniz_diger_dogru": 400,
+          "p": 2.1580747965554333e-16
+        }
+      ],
+      "p_holm": 0.0,
+      "anlamli_0.05": true
+    },
+    "xlmr_none": {
+      "n_seed": 3,
+      "f1_fark_ref_eksi_diger": 0.0156,
+      "ci95": [
+        0.0101,
+        0.0211
+      ],
+      "p_bootstrap": 0.0,
+      "mcnemar_seed_bazli": [
+        {
+          "yalniz_ref_dogru": 459,
+          "yalniz_diger_dogru": 371,
+          "p": 0.002508738596915806
+        },
+        {
+          "yalniz_ref_dogru": 491,
+          "yalniz_diger_dogru": 353,
+          "p": 2.293029510972127e-06
+        },
+        {
+          "yalniz_ref_dogru": 486,
+          "yalniz_diger_dogru": 355,
+          "p": 7.0784911707375675e-06
+        }
+      ],
+      "p_holm": 0.0,
+      "anlamli_0.05": true
+    },
+    "gold_none_lr1e-5": {
+      "n_seed": 3,
+      "f1_fark_ref_eksi_diger": 0.0013,
+      "ci95": [
+        -0.0016,
+        0.0042
+      ],
+      "p_bootstrap": 0.3656,
+      "mcnemar_seed_bazli": [
+        {
+          "yalniz_ref_dogru": 179,
+          "yalniz_diger_dogru": 216,
+          "p": 0.06995068606702225
+        },
+        {
+          "yalniz_ref_dogru": 186,
+          "yalniz_diger_dogru": 166,
+          "p": 0.3111993430021294
+        },
+        {
+          "yalniz_ref_dogru": 220,
+          "yalniz_diger_dogru": 193,
+          "p": 0.20070688616396037
+        }
+      ],
+      "p_holm": 0.7312,
+      "anlamli_0.05": false
+    },
+    "gold_none_lr3e-5": {
+      "n_seed": 3,
+      "f1_fark_ref_eksi_diger": 0.0013,
+      "ci95": [
+        -0.0017,
+        0.0043
+      ],
+      "p_bootstrap": 0.3988,
+      "mcnemar_seed_bazli": [
+        {
+          "yalniz_ref_dogru": 142,
+          "yalniz_diger_dogru": 151,
+          "p": 0.6403135571638734
+        },
+        {
+          "yalniz_ref_dogru": 221,
+          "yalniz_diger_dogru": 175,
+          "p": 0.023617153107223194
+        },
+        {
+          "yalniz_ref_dogru": 164,
+          "yalniz_diger_dogru": 150,
+          "p": 0.4632281435178685
+        }
+      ],
+      "p_holm": 0.7312,
+      "anlamli_0.05": false
+    },
+    "gold_none_lr5e-5": {
+      "n_seed": 3,
+      "f1_fark_ref_eksi_diger": 0.0064,
+      "ci95": [
+        0.0025,
+        0.0104
+      ],
+      "p_bootstrap": 0.0008,
+      "mcnemar_seed_bazli": [
+        {
+          "yalniz_ref_dogru": 275,
+          "yalniz_diger_dogru": 222,
+          "p": 0.019582019176661795
+        },
+        {
+          "yalniz_ref_dogru": 279,
+          "yalniz_diger_dogru": 229,
+          "p": 0.029603430363525758
+        },
+        {
+          "yalniz_ref_dogru": 334,
+          "yalniz_diger_dogru": 264,
+          "p": 0.004737366461039599
+        }
+      ],
+      "p_holm": 0.004,
+      "anlamli_0.05": true
+    }
+  },
+  "kontrollu_karsilastirmalar": [
+    {
+      "a": "gold_weak",
+      "b": "gold",
+      "aciklama": "weak veri eklemenin etkisi (ikisi de ağırlıklı loss)",
+      "f1_fark_a_eksi_b": 0.0009,
+      "ci95": [
+        -0.0026,
+        0.0045
+      ],
+      "p_bootstrap": 0.6036,
+      "mcnemar_p_seed_bazli": [
+        0.471,
+        0.82,
+        0.576
+      ]
+    },
+    {
+      "a": "gold_silver",
+      "b": "gold",
+      "aciklama": "silver veri eklemenin etkisi (ikisi de ağırlıklı loss)",
+      "f1_fark_a_eksi_b": -0.0181,
+      "ci95": [
+        -0.0234,
+        -0.0126
+      ],
+      "p_bootstrap": 0.0,
+      "mcnemar_p_seed_bazli": [
+        2.37e-06,
+        6.79e-05,
+        7.11e-09
+      ]
+    },
+    {
+      "a": "gold_none",
+      "b": "gold",
+      "aciklama": "loss ağırlığını kaldırmanın etkisi (ikisi de yalnızca gold)",
+      "f1_fark_a_eksi_b": 0.0075,
+      "ci95": [
+        0.0029,
+        0.0121
+      ],
+      "p_bootstrap": 0.0016,
+      "mcnemar_p_seed_bazli": [
+        0.0134,
+        0.00091,
+        0.00192
+      ]
+    }
+  ],
+  "referans_kaynak_bazli": {
+    "goemotions_tr": {
+      "n": 4775,
+      "f1_mean": 0.6155,
+      "ci95": [
+        0.5921,
+        0.6377
+      ]
+    },
+    "tremo/consensus": {
+      "n": 2660,
+      "f1_mean": 0.9613,
+      "ci95": [
+        0.9547,
+        0.968
+      ]
+    },
+    "tremo/majority": {
+      "n": 855,
+      "f1_mean": 0.8061,
+      "ci95": [
+        0.7819,
+        0.8301
+      ]
+    },
+    "tweet_emotion": {
+      "n": 585,
+      "f1_mean": 0.9783,
+      "ci95": [
+        0.9684,
+        0.9878
+      ]
+    }
+  }
+}
