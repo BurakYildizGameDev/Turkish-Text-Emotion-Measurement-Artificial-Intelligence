@@ -1,0 +1,174 @@
+{
+  "referans_calistirma": "gold_none_s42",
+  "temperature": 1.1236,
+  "en_sik_karisiklik": [
+    {
+      "gercek": "öfke",
+      "tahmin": "nötr",
+      "n": 206
+    },
+    {
+      "gercek": "nötr",
+      "tahmin": "öfke",
+      "n": 204
+    },
+    {
+      "gercek": "nötr",
+      "tahmin": "mutluluk",
+      "n": 171
+    },
+    {
+      "gercek": "mutluluk",
+      "tahmin": "nötr",
+      "n": 102
+    },
+    {
+      "gercek": "üzüntü",
+      "tahmin": "öfke",
+      "n": 55
+    },
+    {
+      "gercek": "üzüntü",
+      "tahmin": "nötr",
+      "n": 55
+    },
+    {
+      "gercek": "sevgi",
+      "tahmin": "nötr",
+      "n": 52
+    },
+    {
+      "gercek": "öfke",
+      "tahmin": "üzüntü",
+      "n": 49
+    },
+    {
+      "gercek": "nötr",
+      "tahmin": "sevgi",
+      "n": 48
+    },
+    {
+      "gercek": "mutluluk",
+      "tahmin": "şaşkınlık",
+      "n": 46
+    },
+    {
+      "gercek": "mutluluk",
+      "tahmin": "sevgi",
+      "n": 46
+    },
+    {
+      "gercek": "öfke",
+      "tahmin": "mutluluk",
+      "n": 46
+    }
+  ],
+  "kaynak_bazli_hata": {
+    "goemotions_tr": {
+      "n": 4775,
+      "hata": 1341,
+      "hata_orani": 0.2808,
+      "yuksek_guvenli_hata_(>0.9)": 74
+    },
+    "tremo/consensus": {
+      "n": 2660,
+      "hata": 104,
+      "hata_orani": 0.0391,
+      "yuksek_guvenli_hata_(>0.9)": 20
+    },
+    "tremo/majority": {
+      "n": 855,
+      "hata": 178,
+      "hata_orani": 0.2082,
+      "yuksek_guvenli_hata_(>0.9)": 36
+    },
+    "tweet_emotion": {
+      "n": 585,
+      "hata": 13,
+      "hata_orani": 0.0222,
+      "yuksek_guvenli_hata_(>0.9)": 0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1956,
+      10,
+      26,
+      1,
+      46,
+      4,
+      46,
+      102
+    ],
+    [
+      25,
+      930,
+      55,
+      19,
+      9,
+      3,
+      5,
+      55
+    ],
+    [
+      46,
+      49,
+      1081,
+      10,
+      12,
+      10,
+      8,
+      206
+    ],
+    [
+      13,
+      36,
+      14,
+      665,
+      3,
+      4,
+      3,
+      24
+    ],
+    [
+      34,
+      15,
+      13,
+      7,
+      566,
+      4,
+      1,
+      14
+    ],
+    [
+      6,
+      6,
+      38,
+      6,
+      4,
+      466,
+      2,
+      23
+    ],
+    [
+      37,
+      2,
+      13,
+      4,
+      0,
+      0,
+      191,
+      52
+    ],
+    [
+      171,
+      44,
+      204,
+      15,
+      25,
+      4,
+      48,
+      1384
+    ]
+  ]
+}
