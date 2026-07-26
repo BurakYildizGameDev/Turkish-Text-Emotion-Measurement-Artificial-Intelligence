@@ -1,4 +1,3 @@
-# Commit 190: feat(v2/labels): add tr_lower, clean_text, and dedup_key Unicode utilities
 """
 Etiket şemasının tek kaynağı (v2 veri seti).
 

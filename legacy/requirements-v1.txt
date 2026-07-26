@@ -1,0 +1,7 @@
+# legacy/ scriptleri için kök requirements.txt'ye EK paketler
+-r ../requirements.txt
+evaluate>=0.4.2
+seaborn>=0.13.0
+plotly>=5.21.0                  # scripts/app.py
+shap>=0.45.0                    # scripts/shap_interpretability.py
+tensorboard>=2.16.0             # src_v1/train.py
