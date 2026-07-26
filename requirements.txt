@@ -1,10 +1,28 @@
-torch
-transformers
-datasets
-scikit-learn
-pandas
-numpy
-pyarrow
-fastparquet
-matplotlib
-seaborn
+# ============================================================
+# Türkçe Duygu Analizi (v2, 8 sınıf) — src/, demo/, tests/ tarafından import edilen paketler.
+# v1 (legacy/) için ek paketler: legacy/requirements-v1.txt
+# ============================================================
+
+# --- Model / eğitim ---
+torch>=2.3.0                    # CUDA 12.x destekli sürümü pytorch.org'dan kurun
+transformers>=4.46.0            # Trainer(processing_class=...) için
+tokenizers>=0.19.0
+accelerate>=0.30.0              # HF Trainer bağımlılığı
+scikit-learn>=1.4.0             # metrikler + TF-IDF baseline
+
+# --- Veri ---
+datasets>=2.19.0                # src/data/sources.py (HF veri setleri)
+huggingface_hub>=0.23.0
+datasketch>=1.6.0               # src/data/build_v2.py (MinHash-LSH yakın kopya)
+pandas>=2.2.0
+pyarrow>=15.0.0                 # parquet
+numpy>=1.26.0
+scipy>=1.13.0                   # istatistik testleri
+pyyaml>=6.0.1
+
+# --- Görselleştirme / demo ---
+matplotlib>=3.8.0
+streamlit>=1.35.0               # demo/app.py
+
+# --- Geliştirme ---
+pytest>=8.0.0
