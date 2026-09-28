@@ -6,6 +6,9 @@ değerlendirme ve Streamlit demosu.
 **Sınıflar:** mutluluk · üzüntü · öfke · korku · şaşkınlık · tiksinti · sevgi · nötr
 (tek kaynak: `src/data/labels.py`)
 
+**Hugging Face:** eğitilmiş model [`BurakshDev/berturk-turkish-emotion-8class`](https://huggingface.co/BurakshDev/berturk-turkish-emotion-8class)
+adresinde; eğitim yapmadan doğrudan `transformers` ile yüklenebilir.
+
 ## Sonuçlar
 
 Test seti: 8.875 insan etiketli örnek. 3 seed ortalaması; düzen seçimi yalnızca val F1 ile yapıldı.
@@ -139,7 +142,8 @@ Ayrıntılar: [`data/v2/README.md`](data/v2/README.md). Özet:
 
 - val ve test **yalnızca gold** veriden oluşur; yakın kopyalar MinHash-LSH ile gruplanıp aynı split'e konur.
 - TREMO lisansı nedeniyle `data/v2/*.parquet` repoya konmaz; `build_v2` ile yeniden üretilir.
-- Eğitilmiş model ağırlıkları (`models/v2/`, ~440 MB) repoda değildir.
+- Eğitilmiş model ağırlıkları (`models/v2/`, ~440 MB) repoda değildir; seçilen model (`gold_none_s42`)
+  [Hugging Face'te](https://huggingface.co/BurakshDev/berturk-turkish-emotion-8class) yayınlandı.
 
 ## Proje yapısı
 
