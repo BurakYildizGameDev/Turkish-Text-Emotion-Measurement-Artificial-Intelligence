@@ -172,6 +172,12 @@ legacy/            v1 (10 sınıf) kodu ve sonuçları — bakımı yapılmıyor
   (ürün yorumu, haber, konuşma dili) performans farklı olabilir.
 - Tek etiketli sınıflandırmadır; karışık duygular tek sınıfa indirgenir.
 
+## Commit geçmişi hakkında
+
+Bu proje Mart–Temmuz 2026 arasında başka bir depoda geliştirildi. Commit'ler o dönemde, orijinal tarihleriyle
+yapıldı; geçmiş daha sonra bu depoya taşınıp toplu olarak push'landı. Bu yüzden commit tarihleri deponun
+GitHub'da oluşturulma tarihinden daha eskidir.
+
 ## Lisans
 
 Kod: MIT (`LICENSE`). Veri kaynaklarının lisansları kendilerine aittir; TREMO ve ondan türetilen modeller
