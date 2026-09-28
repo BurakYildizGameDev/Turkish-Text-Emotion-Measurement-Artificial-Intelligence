@@ -176,3 +176,4 @@ legacy/            v1 (10 sınıf) kodu ve sonuçları — bakımı yapılmıyor
 
 Kod: MIT (`LICENSE`). Veri kaynaklarının lisansları kendilerine aittir; TREMO ve ondan türetilen modeller
 yalnızca ticari olmayan amaçlarla kullanılabilir.
+
